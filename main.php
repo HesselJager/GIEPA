@@ -22,7 +22,7 @@ body {
 
 header{
 height: 150px;	
-background-color: #D0EEF1;
+background-color: #DC292A;
 width: 100%;
   padding: 0px;
   margin: 0px;
@@ -36,7 +36,7 @@ footer {
   height: 150px;
   width: 100%;
 	
-  background-color: #F10E0E;
+  background-color: #184893;
   padding: 0px;
   margin: 0px;
   margin-bottom:10px;
@@ -92,7 +92,8 @@ window.setInterval(function(){
 
 ?>
 <body>
-<header><img src="https://www.giepa.gm/sites/default/files/logo-giepa.png" alt="" style="height: 80%;">
+<header><img src="https://www.giepa.gm/sites/default/files/logo-giepa.png" alt="" style="height: 80%;
+background-color:#f5f5f5 ; border:5px solid #0B6461;">
 <a href='logout.php' style="position: absolute; right: 2%; top:2%; height:4%;"><button>Log out</button></a>
 </header>
 <div id="content"></div>
