@@ -18,13 +18,14 @@
     <title>Giepa weather solution</title>
 
     <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<meta name="theme-color" content="#563d7c">
+    <meta name="theme-color" content="#563d7c">
 
 
     <style>
     	html,
+
 body {
   height: 100%;
 }
@@ -45,9 +46,11 @@ body {
   padding: 15px;
   margin: auto;
 }
+
 .form-signin .checkbox {
   font-weight: 400;
 }
+
 .form-signin .form-control {
   position: relative;
   box-sizing: border-box;
@@ -55,19 +58,37 @@ body {
   padding: 10px;
   font-size: 16px;
 }
+
 .form-signin .form-control:focus {
   z-index: 2;
 }
-.form-signin input[type="email"] {
+
+.form-signin input[type="text"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
+
 .form-signin input[type="password"] {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+.form-signin input[type="submit"] {
+  background-color: #184893;
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.24);
+  -webkit-transition-duration: 0.2s; /* Safari */
+  transition-duration: 0.2s;
+}
+
+.form-signin input[type="submit"]:hover {
+  background-color: #DC292A;
+}
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -89,13 +110,21 @@ body {
   <body class="text-center">
     <form class="form-signin" method="post" action="">
       <img class="mb-4" src="https://www.giepa.gm/sites/default/files/logo-giepa.png" alt="" style="width: 80%;">
+
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
       <label for="inputEmail" class="sr-only">Username</label>
+
       <input name="username" type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+
       <label for="inputPassword" class="sr-only">Password</label>
+
       <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
       <div class="checkbox mb-3"></div>
+
       <input type='submit' value="Sign in" name="submit" class="btn btn-lg btn-primary btn-block" type="submit">
+
       <p class="mt-5 mb-3 text-muted">&copy; Copyright <?php echo date("Y"); ?></p>
     </form>
   </body>
