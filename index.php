@@ -88,18 +88,17 @@ body {
   </head>
   <body class="text-center">
     <form class="form-signin" method="post" action="">
-  <img class="mb-4" src="https://www.giepa.gm/sites/default/files/logo-giepa.png" alt="" style="width: 80%;">
-  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-  <label for="inputEmail" class="sr-only">Username</label>
-  <input name="username" type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
-  <label for="inputPassword" class="sr-only">Password</label>
-  <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-  <div class="checkbox mb-3">
-  </div>
-  <input type='submit' value="Sign in" name="submit" class="btn btn-lg btn-primary btn-block" type="submit">
-  <p class="mt-5 mb-3 text-muted">&copy; <?php echo date("Y"); ?></p>
-</form>
-</body>
+      <img class="mb-4" src="https://www.giepa.gm/sites/default/files/logo-giepa.png" alt="" style="width: 80%;">
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="inputEmail" class="sr-only">Username</label>
+      <input name="username" type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <div class="checkbox mb-3"></div>
+      <input type='submit' value="Sign in" name="submit" class="btn btn-lg btn-primary btn-block" type="submit">
+      <p class="mt-5 mb-3 text-muted">&copy; Copyright <?php echo date("Y"); ?></p>
+    </form>
+  </body>
 </html>
 <?php 
 	
