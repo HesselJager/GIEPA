@@ -133,6 +133,7 @@
       content: contentStringGambia
     });
 
+    var markerGambia = new google.maps.Marker( {
       position: gambia,
       map: map,
       title: 'Gambia Weather Station'
