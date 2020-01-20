@@ -37,7 +37,7 @@ footer {
   background-color: #184893;
   padding: 0px;
   margin: 0px;
-  margin-bottom:10px;
+  margin-bottom:0px;
   border: 0px;
 }
 button{
