@@ -43,7 +43,7 @@ footer {
   background-color: #184893;
   padding: 0px;
   margin: 0px;
-  margin-bottom:10px;
+  margin-bottom:0px;
   border: 0px;
 }
 button{
@@ -107,32 +107,32 @@ window.setInterval(function(){
     <!--The div element for the map -->
     <div id="map"></div>
     <script>
-function initMap() {
-  var gambia = {lat: 13.2, lng: -16.633};
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: gambia
-  });
+      function initMap() {
+        var gambia = {lat: 13.2, lng: -16.633};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: gambia
+        });
 
-  var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '<h2>Select this station</h2>'+
-      '</div>'+
-      '</div>';
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '<h2>Select this station</h2>'+
+            '</div>'+
+            '</div>';
 
-  var infowindow = new google.maps.InfoWindow({
-    content: contentString
-  });
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
 
-  var marker = new google.maps.Marker({
-    position: gambia,
-    map: map,
-    title: 'Uluru (Ayers Rock)'
-  });
-  marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  });
-}
+        var marker = new google.maps.Marker({
+          position: gambia,
+          map: map,
+          title: 'Uluru (Ayers Rock)'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
     </script>
     <!--Load the API from the specified URL
     * The async attribute allows the browser to render the page while the API loads
