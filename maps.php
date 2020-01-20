@@ -8,7 +8,7 @@
       <style>
        /* Set the size of the div element that contains the map */
       #map {
-        height: 650px;  /* The height is 400 pixels */
+        height: calc(75% - 20px);  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
        }
       
@@ -32,12 +32,23 @@ width: 100%;
   margin: 0px;
   border: 0px;
 }
+
+.navbar {
+  min-height: 10%;
+}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 10%;
+  line-height: 80px;
+}
+
 footer {
   
 
 
  
-  height: 150px;
+  height: 15%;
   width: 100%;
   
   background-color: #184893;
