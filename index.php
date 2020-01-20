@@ -1,9 +1,17 @@
 <?php
 
 	include 'functions.php';
-
+	$error = "";
 	if(isset($_POST['submit'])) {
-		verify_login($_POST['username'], $_POST['password']);
+		$var = (verify_login($_POST['username'], $_POST['password']) == True);
+		if($var == True){
+			session_start();
+			$_SESSION['logged_in'] = true;
+			header("location: main.php");
+		}
+		if($var == False){
+			$error = "You've entered the wrong credentials, please try again.";
+		}
 	}
 ?>
 
@@ -121,6 +129,8 @@ body {
 
       <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
 
+		<h6 class="h6 mb-6 font-weight-normal"><font color="red"><?php echo $error; ?></font></h6>
+	  
       <div class="checkbox mb-3"></div>
 
       <input type='submit' value="Sign in" name="submit" class="btn btn-lg btn-primary btn-block" type="submit">
