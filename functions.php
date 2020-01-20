@@ -6,10 +6,11 @@
 	function verify_login($username, $password) {
 		global $USER_USERNAME, $USER_PASSWORD; 
 		if(password_verify($password, $USER_PASSWORD) == 1 && $username == $USER_USERNAME) {
-			session_start();
-			$_SESSION['logged_in'] = true;
-			header("location: home.php");
-		} 
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 
 	function check_login() {
