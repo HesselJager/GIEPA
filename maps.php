@@ -129,11 +129,10 @@
         '</div>'+
         '</div>';
 
-    var infowindowGambia = new google.maps.InfoWindow({
+    var infowindowGambia = new google.maps.InfoWindow( {
       content: contentStringGambia
     });
 
-    var markerGambia = new google.maps.Marker({
       position: gambia,
       map: map,
       title: 'Gambia Weather Station'
@@ -150,11 +149,11 @@
         '</div>'+
         '</div>';
 
-    var infowindowAtlantic = new google.maps.InfoWindow({
+    var infowindowAtlantic = new google.maps.InfoWindow( {
       content: contentStringAtlantic
     });
 
-    var markerAtlantic = new google.maps.Marker({
+    var markerAtlantic = new google.maps.Marker( {
       position: atlantic,
       map: map,
       title: 'Atlantic Weather Station'
@@ -175,7 +174,7 @@
       content: contentStringSouthAtlantic1
     });
 
-    var markerSouthAtlantic1 = new google.maps.Marker({
+    var markerSouthAtlantic1 = new google.maps.Marker( {
       position: south_atlantic_ocean_1,
       map: map,
       title: 'South Atlantic Weather Station 1'
@@ -192,11 +191,11 @@
         '</div>'+
         '</div>';
 
-    var infowindowSouthAtlantic2 = new google.maps.InfoWindow({
+    var infowindowSouthAtlantic2 = new google.maps.InfoWindow( {
       content: contentStringSouthAtlantic2
     });
 
-    var markerSouthAtlantic2 = new google.maps.Marker({
+    var markerSouthAtlantic2 = new google.maps.Marker( {
       position: south_atlantic_ocean_2,
       map: map,
       title: 'South Atlantic Weather Station 2'
@@ -213,11 +212,11 @@
         '</div>'+
         '</div>';
 
-    var infowindowSouthAtlantic3 = new google.maps.InfoWindow({
+    var infowindowSouthAtlantic3 = new google.maps.InfoWindow( {
       content: contentStringSouthAtlantic3
     });
 
-    var markerSouthAtlantic3 = new google.maps.Marker({
+    var markerSouthAtlantic3 = new google.maps.Marker( {
       position: south_atlantic_ocean_3,
       map: map,
       title: 'South Atlantic Weather Station 3'
@@ -234,11 +233,11 @@
         '</div>'+
         '</div>';
 
-    var infowindowSouthAtlantic4 = new google.maps.InfoWindow({
+    var infowindowSouthAtlantic4 = new google.maps.InfoWindow( {
       content: contentStringSouthAtlantic4
     });
 
-    var markerSouthAtlantic4 = new google.maps.Marker({
+    var markerSouthAtlantic4 = new google.maps.Marker( {
       position: south_atlantic_ocean_4,
       map: map,
       title: 'South Atlantic Weather Station 4'
@@ -255,11 +254,11 @@
         '</div>'+
         '</div>';
 
-    var infowindowSouthAtlantic5 = new google.maps.InfoWindow({
+    var infowindowSouthAtlantic5 = new google.maps.InfoWindow( {
       content: contentStringSouthAtlantic5
     });
 
-    var markerSouthAtlantic5 = new google.maps.Marker({
+    var markerSouthAtlantic5 = new google.maps.Marker( {
       position: south_atlantic_ocean_5,
       map: map,
       title: 'South Atlantic Weather Station 5'
@@ -276,11 +275,11 @@
         '</div>'+
         '</div>';
 
-    var infowindowSouthAtlantic6 = new google.maps.InfoWindow({
+    var infowindowSouthAtlantic6 = new google.maps.InfoWindow( {
       content: contentStringSouthAtlantic6
     });
 
-    var markerSouthAtlantic5 = new google.maps.Marker({
+    var markerSouthAtlantic5 = new google.maps.Marker( {
       position: south_atlantic_ocean_6,
       map: map,
       title: 'South Atlantic Weather Station 6'
