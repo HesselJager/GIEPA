@@ -98,7 +98,7 @@ background-color:#f5f5f5 ; border:5px solid #0B6461;">
 <nav class="navbar navbar-light" style="background-color: #DC292A;">--->
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #DC292A; ">
     <a class="navbar-brand" href="#">
-      <img src="https://www.giepa.gm/sites/default/files/logo-giepa.png" width="120" height="40" alt="">
+      <img src="https://www.giepa.gm/sites/default/files/logo-giepa.png" width="120" height="40" alt="" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
     </a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav" style="font-size: 20px;">
