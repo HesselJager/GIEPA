@@ -1,3 +1,11 @@
+<?php
+  include 'functions.php';
+
+  session_start();
+  
+  check_login();
+?>
+
 <!DOCTYPE html>
 
 
@@ -76,14 +84,6 @@
       showTemp()
   }, 1000);
 </script>
-
-<?php
-  include 'functions.php';
-
-  session_start();
-  check_login();
-?>
-
  <body>
 
   <!--<header><img src="https://www.giepa.gm/sites/default/files/logo-giepa.png" alt="" style="height: 80%;
@@ -124,9 +124,8 @@
 
     /* Weather Station Gambia */
     var contentStringGambia = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '<h2>Select this station</h2>'+
-        '</div>'+
+        '<h5>BANJUL/YUNDUM</h5>' +
+        '<a class="btn btn-primary" href="view_station.php?station=617010" role="button">Select this station</a>' +
         '</div>';
 
     var infowindowGambia = new google.maps.InfoWindow( {
@@ -145,9 +144,8 @@
 
     /* Weather Station Atlantic Ocean */
     var contentStringAtlantic = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '<h2>Select this station</h2>'+
-        '</div>'+
+        '<h5>SAL</h5>' +
+        '<a class="btn btn-primary" href="view_station.php?station=85940" role="button">Select this station</a>' +
         '</div>';
 
     var infowindowAtlantic = new google.maps.InfoWindow( {
@@ -166,9 +164,8 @@
 
     /* Weather Station south atlantic ocean 1 */
     var contentStringSouthAtlantic1 = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '<h2>Select this station</h2>'+
-        '</div>'+
+        '<h5>WIDE AWAKE FIELD</h5>' +
+        '<a class="btn btn-primary" href="view_station.php?station=619020" role="button">Select this station</a>' +
         '</div>';
 
     var infowindowSouthAtlantic1 = new google.maps.InfoWindow({
@@ -187,9 +184,8 @@
 
     /* Weather Station south atlantic ocean 2 */
     var contentStringSouthAtlantic2 = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '<h2>Select this station</h2>'+
-        '</div>'+
+        '<h5>GRYTVIKEN S.GEORGIA</h5>' +
+        '<a class="btn btn-primary" href="view_station.php?station=889030" role="button">Select this station</a>' +
         '</div>';
 
     var infowindowSouthAtlantic2 = new google.maps.InfoWindow( {
@@ -208,9 +204,8 @@
 
     /* Weather Station south atlantic ocean 3 */
     var contentStringSouthAtlantic3 = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '<h2>Select this station</h2>'+
-        '</div>'+
+        '<h5>MOUNT PLEASANT AIRP</h5>' +
+        '<a class="btn btn-primary" href="view_station.php?station=888890" role="button">Select this station</a>' +
         '</div>';
 
     var infowindowSouthAtlantic3 = new google.maps.InfoWindow( {
@@ -224,14 +219,13 @@
     });
 
     markerSouthAtlantic3.addListener('click', function() {
-      infowindowSouthAtlantic2.open(map, markerSouthAtlantic3);
+      infowindowSouthAtlantic3.open(map, markerSouthAtlantic3);
     });
 
     /* Weather Station south atlantic ocean 4 */
     var contentStringSouthAtlantic4 = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '<h2>Select this station</h2>'+
-        '</div>'+
+        '<h5>STANLEY</h5>' +
+        '<a class="btn btn-primary" href="view_station.php?station=888900" role="button">Select this station</a>' +
         '</div>';
 
     var infowindowSouthAtlantic4 = new google.maps.InfoWindow( {
@@ -250,9 +244,8 @@
 
     /* Weather Station south atlantic ocean 5 */
     var contentStringSouthAtlantic5 = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '<h2>Select this station</h2>'+
-        '</div>'+
+        '<h5>STANLEY AIRPORT</h5>' +
+        '<a class="btn btn-primary" href="view_station.php?station=888910" role="button">Select this station</a>' +
         '</div>';
 
     var infowindowSouthAtlantic5 = new google.maps.InfoWindow( {
@@ -271,16 +264,15 @@
 
     /* Weather Station south atlantic ocean 6 */
     var contentStringSouthAtlantic6 = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '<h2>Select this station</h2>'+
-        '</div>'+
-        '</div>';
+      '<h5>GOUGH ISLAND</h5>' +
+      '<a class="btn btn-primary" href="view_station.php?station=689060" role="button">Select this station</a>' +
+      '</div>';
 
     var infowindowSouthAtlantic6 = new google.maps.InfoWindow( {
       content: contentStringSouthAtlantic6
     });
 
-    var markerSouthAtlantic5 = new google.maps.Marker( {
+    var markerSouthAtlantic6 = new google.maps.Marker({
       position: south_atlantic_ocean_6,
       map: map,
       title: 'South Atlantic Weather Station 6'
