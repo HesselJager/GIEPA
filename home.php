@@ -102,8 +102,8 @@ background-color:#f5f5f5 ; border:5px solid #0B6461;">
     </a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav" style="font-size: 20px;">
-      <a class="nav-item nav-link" href="#" style="color: #fff;">Home</a>
-      <a class="nav-item nav-link" href="#" style="color: #fff;">Stations</a>
+      <a class="nav-item nav-link" href="home.php" style="color: #fff;">Home</a>
+      <a class="nav-item nav-link" href="maps.php" style="color: #fff;">Stations</a>
       <a class="nav-item nav-link" href="logout.php" style="color: #fff;">Log out</a>
     </div>
   </div>
