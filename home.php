@@ -2,71 +2,68 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<title>Weather Information</title>
-	    <style>
-    	html,
+	  <style>
+  	 html,
 
-body {
-  height: 100%;
-  background-color: #f5f5f5;
-  margin: 0;
-}
-#content{
-	min-height: calc(75% - 20px);
-	
-}
+    body {
+      height: 100%;
+      background-color: #f5f5f5;
+      margin: 0;
+      overflow-y: hidden;
+    }
 
-header{
-height: 150px;	
-background-color: #DC292A;
-width: 100%;
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
-}
+    #content{
+    	min-height: 70%;
+    }
 
-.navbar {
-  min-height: 10%;
-}
+    header{
+      height: 150px;	
+      background-color: #DC292A;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+      border: 0px;
+    }
 
-.navbar-brand {
-  padding: 0 15px;
-  height: 10%;
-  line-height: 80px;
-}
+    .navbar {
+      min-height: 10%;
+    }
 
-footer {
-	
+    .navbar-brand {
+      padding: 0 15px;
+      height: 10%;
+      line-height: 80px;
+    }
 
+    footer {
+      height: 20%;
+      width: 100%;
+    	
+      background-color: #184893;
+      padding: 0px;
+      margin: 0px;
+      margin-bottom:0px;
+      border: 0px;
+    }
 
- 
-  height: 15%;
-  width: 100%;
-	
-  background-color: #184893;
-  padding: 0px;
-  margin: 0px;
-  margin-bottom:0px;
-  border: 0px;
-}
-button{
-	  background-color: #f5f5f5;
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.24);
-  height: 100%;
-  width:100%;
-	
-}
+    button {
+      background-color: #f5f5f5;
+      margin-bottom: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      box-shadow: 0 10px 16px 0 rgba(0,0,0,0.24);
+      height: 100%;
+      width:100%;
+    }
 
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
         }
       }
     </style>

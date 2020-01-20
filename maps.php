@@ -8,7 +8,7 @@
       <style>
        /* Set the size of the div element that contains the map */
       #map {
-        height: calc(75% - 20px);  /* The height is 400 pixels */
+        height: 70%;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
        }
       
@@ -18,6 +18,7 @@ body {
   height: 100%;
   background-color: #f5f5f5;
   margin: 0;
+  overflow-y: hidden;
 }
 #content{
   min-height:90vh;
@@ -48,7 +49,7 @@ footer {
 
 
  
-  height: 15%;
+  height: 20%;
   width: 100%;
   
   background-color: #184893;
