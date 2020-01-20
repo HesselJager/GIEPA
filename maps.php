@@ -33,10 +33,7 @@ width: 100%;
   border: 0px;
 }
 footer {
-  
-
-
- 
+   
   height: 150px;
   width: 100%;
   
@@ -108,30 +105,188 @@ window.setInterval(function(){
     <div id="map"></div>
     <script>
 function initMap() {
-  var gambia = {lat: 13.2, lng: -16.633};
+  var gambia = {lat: 13.2, lng: -16.633}; // 617010
+  var atlantic = {lat: 16.733, lng: -22.95}; // 85940
+  var south_atlantic_ocean_1 = {lat: -7.967, lng: -14.4}; // 619020
+  var south_atlantic_ocean_2 = {lat: -54.267, lng: -36.5}; // 889030
+  var south_atlantic_ocean_3 = {lat: -51.817, lng: -58.45}; // 888890
+  var south_atlantic_ocean_4 = {lat: -51.7, lng: -57.867}; // 888900
+  var south_atlantic_ocean_5 = {lat: -51.683, lng: -57.767}; // 888910
+  var south_atlantic_ocean_6 = {lat: -40.35, lng: -9.883}; // 689060
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 4,
     center: gambia
   });
 
-  var contentString = '<div id="content">'+
+  /* Weather Station Gambia */
+  var contentStringGambia = '<div id="content">'+
       '<div id="siteNotice">'+
       '<h2>Select this station</h2>'+
       '</div>'+
       '</div>';
 
-  var infowindow = new google.maps.InfoWindow({
-    content: contentString
+  var infowindowGambia = new google.maps.InfoWindow({
+    content: contentStringGambia
   });
 
-  var marker = new google.maps.Marker({
+  var markerGambia = new google.maps.Marker({
     position: gambia,
     map: map,
-    title: 'Uluru (Ayers Rock)'
+    title: 'Gambia Weather Station'
   });
-  marker.addListener('click', function() {
-    infowindow.open(map, marker);
+
+  markerGambia.addListener('click', function() {
+    infowindowGambia.open(map, markerGambia);
   });
+
+  /* Weather Station Atlantic Ocean */
+  var contentStringAtlantic = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '<h2>Select this station</h2>'+
+      '</div>'+
+      '</div>';
+
+  var infowindowAtlantic = new google.maps.InfoWindow({
+    content: contentStringAtlantic
+  });
+
+  var markerAtlantic = new google.maps.Marker({
+    position: atlantic,
+    map: map,
+    title: 'Atlantic Weather Station'
+  });
+
+  markerAtlantic.addListener('click', function() {
+    infowindowAtlantic.open(map, markerAtlantic);
+  });
+
+  /* Weather Station south atlantic ocean 1 */
+  var contentStringSouthAtlantic1 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '<h2>Select this station</h2>'+
+      '</div>'+
+      '</div>';
+
+  var infowindowSouthAtlantic1 = new google.maps.InfoWindow({
+    content: contentStringSouthAtlantic1
+  });
+
+  var markerSouthAtlantic1 = new google.maps.Marker({
+    position: south_atlantic_ocean_1,
+    map: map,
+    title: 'South Atlantic Weather Station 1'
+  });
+
+  markerSouthAtlantic1.addListener('click', function() {
+    infowindowSouthAtlantic1.open(map, markerSouthAtlantic1);
+  });
+
+  /* Weather Station south atlantic ocean 2 */
+  var contentStringSouthAtlantic2 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '<h2>Select this station</h2>'+
+      '</div>'+
+      '</div>';
+
+  var infowindowSouthAtlantic2 = new google.maps.InfoWindow({
+    content: contentStringSouthAtlantic2
+  });
+
+  var markerSouthAtlantic2 = new google.maps.Marker({
+    position: south_atlantic_ocean_2,
+    map: map,
+    title: 'South Atlantic Weather Station 2'
+  });
+
+  markerSouthAtlantic2.addListener('click', function() {
+    infowindowSouthAtlantic2.open(map, markerSouthAtlantic2);
+  });
+
+  /* Weather Station south atlantic ocean 3 */
+  var contentStringSouthAtlantic3 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '<h2>Select this station</h2>'+
+      '</div>'+
+      '</div>';
+
+  var infowindowSouthAtlantic3 = new google.maps.InfoWindow({
+    content: contentStringSouthAtlantic3
+  });
+
+  var markerSouthAtlantic3 = new google.maps.Marker({
+    position: south_atlantic_ocean_3,
+    map: map,
+    title: 'South Atlantic Weather Station 3'
+  });
+
+  markerSouthAtlantic3.addListener('click', function() {
+    infowindowSouthAtlantic2.open(map, markerSouthAtlantic3);
+  });
+
+  /* Weather Station south atlantic ocean 4 */
+  var contentStringSouthAtlantic4 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '<h2>Select this station</h2>'+
+      '</div>'+
+      '</div>';
+
+  var infowindowSouthAtlantic4 = new google.maps.InfoWindow({
+    content: contentStringSouthAtlantic4
+  });
+
+  var markerSouthAtlantic4 = new google.maps.Marker({
+    position: south_atlantic_ocean_4,
+    map: map,
+    title: 'South Atlantic Weather Station 4'
+  });
+
+  markerSouthAtlantic4.addListener('click', function() {
+    infowindowSouthAtlantic4.open(map, markerSouthAtlantic4);
+  });
+
+  /* Weather Station south atlantic ocean 5 */
+  var contentStringSouthAtlantic5 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '<h2>Select this station</h2>'+
+      '</div>'+
+      '</div>';
+
+  var infowindowSouthAtlantic5 = new google.maps.InfoWindow({
+    content: contentStringSouthAtlantic5
+  });
+
+  var markerSouthAtlantic5 = new google.maps.Marker({
+    position: south_atlantic_ocean_5,
+    map: map,
+    title: 'South Atlantic Weather Station 5'
+  });
+
+  markerSouthAtlantic5.addListener('click', function() {
+    infowindowSouthAtlantic5.open(map, markerSouthAtlantic5);
+  });
+
+  /* Weather Station south atlantic ocean 6 */
+  var contentStringSouthAtlantic6 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '<h2>Select this station</h2>'+
+      '</div>'+
+      '</div>';
+
+  var infowindowSouthAtlantic6 = new google.maps.InfoWindow({
+    content: contentStringSouthAtlantic6
+  });
+
+  var markerSouthAtlantic5 = new google.maps.Marker({
+    position: south_atlantic_ocean_6,
+    map: map,
+    title: 'South Atlantic Weather Station 6'
+  });
+
+  markerSouthAtlantic6.addListener('click', function() {
+    infowindowSouthAtlantic6.open(map, markerSouthAtlantic6);
+  });
+
+
 }
     </script>
     <!--Load the API from the specified URL
