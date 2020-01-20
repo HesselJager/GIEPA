@@ -7,7 +7,7 @@
 		if($var == True){
 			session_start();
 			$_SESSION['logged_in'] = true;
-			header("location: main.php");
+			header("location: home.php");
 		}
 		if($var == False){
 			$error = "You've entered the wrong credentials, please try again.";
