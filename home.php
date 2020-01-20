@@ -1,62 +1,69 @@
 <!doctype html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<title>Weather Information</title>
-	    <style>
-    	html,
+	  <style>
+  	 html,
 
-body {
-  height: 100%;
-  background-color: #f5f5f5;
-  margin: 0;
-}
-#content{
-	min-height:90vh;
-	
-}
+    body {
+      height: 100%;
+      background-color: #f5f5f5;
+      margin: 0;
+      overflow-y: hidden;
+    }
 
-header{
-height: 150px;	
-background-color: #DC292A;
-width: 100%;
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
-}
-footer {
-	
+    #content{
+    	min-height: 70%;
+    }
+
+    header{
+      height: 150px;	
+      background-color: #DC292A;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+      border: 0px;
+    }
+
+    .navbar {
+      min-height: 10%;
+    }
+
+    .navbar-brand {
+      padding: 0 15px;
+      height: 10%;
+      line-height: 80px;
+    }
+
+    footer {
+      height: 20%;
+      width: 100%;
+    	
+      background-color: #184893;
+      padding: 0px;
+      margin: 0px;
+      margin-bottom:0px;
+      border: 0px;
+    }
+
+    button {
+      background-color: #f5f5f5;
+      margin-bottom: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      box-shadow: 0 10px 16px 0 rgba(0,0,0,0.24);
+      height: 100%;
+      width:100%;
+    }
 
 
- 
-  height: 150px;
-  width: 100%;
-	
-  background-color: #184893;
-  padding: 0px;
-  margin: 0px;
-  margin-bottom:0px;
-  border: 0px;
-}
-button{
-	  background-color: #f5f5f5;
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.24);
-  height: 100%;
-  width:100%;
- 
-	
-	
-}
-
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
         }
       }
     </style>
@@ -100,14 +107,15 @@ background-color:#f5f5f5 ; border:5px solid #0B6461;">
     <a class="navbar-brand" href="#">
       <img src="https://www.giepa.gm/sites/default/files/logo-giepa.png" width="120" height="40" alt="" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
     </a>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav" style="font-size: 20px;">
-      <a class="nav-item nav-link" href="home.php" style="color: #fff;">Home</a>
-      <a class="nav-item nav-link" href="maps.php" style="color: #fff;">Stations</a>
-      <a class="nav-item nav-link" href="logout.php" style="color: #fff;">Log out</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+     <div class="navbar-nav" style="font-size: 20px;">
+       <a class="nav-item nav-link" href="home.php" style="color: #fff;">Home</a>
+        <a class="nav-item nav-link" href="maps.php" style="color: #fff;">Stations</a>
+        <a class="nav-item nav-link" href="logout.php" style="color: #fff;">Log out</a>
+     </div>
     </div>
-  </div>
-</nav>
+  </nav>
+
 <div id="content"></div>
 <footer></footer>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
