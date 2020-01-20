@@ -63,7 +63,7 @@ class Measurement{
 	 The object will be put in the measurements array
 	*/
 
-	function parse_xml($file){
+	function parse_xml($xml_file){
 		global $station_numbers;
 		global $meaurements;
 		$xml = simplexml_load_file($xml_file);
