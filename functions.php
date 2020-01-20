@@ -65,7 +65,7 @@ class Measurement{
 
 	function parse_xml($xml_file){
 		global $station_numbers;
-		global $meaurements;
+		global $measurements;
 		$xml = simplexml_load_file($xml_file);
 		
 		foreach($xml->children() as $child){
@@ -97,8 +97,6 @@ class Measurement{
 		}
 		
 	}
-
-
 
 
 
