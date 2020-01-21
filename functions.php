@@ -37,10 +37,10 @@
 
 /*This array will hold the required data for the weather application, 
 in the form of a measurement object
-The key is the stationnumber, the value is an array of the measurement objects belonging to the the 
-station.
+The key is the stationnumber, the value is an array of the measurement objects belonging to the 
+station, holding this stationnumber.
 */
-$measurements=array();
+$measurements=array_fill_keys(array(617010, 85940, 619020, 889030, 888890, 888900, 888910, 689060),array());
 
 
 //This class creates a measurement object, which holds data of a measuremnt in a weatherstation
@@ -94,10 +94,10 @@ class Measurement{
                   $measurement->frshtt=intval($child->FRSHTT);
                   $measurement->cldc=floatval($child->CLDC);
                   $measurement->wnddir=floatval($child->WNDDIR);
-                  $measurements[$measurement->stn].array_push($measurement);
+				  $temp=array($measurement);
+                  $measurements[$measurement->stn]=array_merge($measurements[$measurement->stn],$temp);
                
-                    
-                
+       
                 
             }
             
@@ -107,9 +107,7 @@ class Measurement{
 
 
 
-
-
-
+         
 
 
 
