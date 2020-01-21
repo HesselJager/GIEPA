@@ -19,6 +19,16 @@
 			header('location: index.php');
 		}
 	}
+
+	function check_station($station) {
+		$allowed_stations = array(617010, 85940, 619020, 889030, 888890, 888900, 888910, 689060);
+	
+		if(in_array($station, $allowed_stations)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	
 
 
