@@ -28,8 +28,8 @@
     }
 
     #map {
-      height: 70%;  /* The height is 400 pixels */
-      width: 100%;  /* The width is the width of the web page */
+      height: 80%;  
+      width: 100%; 
     }
 
     .navbar {
@@ -52,13 +52,9 @@
     }
 
     footer {
-      height: 20%;
+      height: 8%;
       width: 100%;
       background-color: #184893;
-      padding: 0px;
-      margin: 0px;
-      margin-bottom:0px;
-      border: 0px;
     }
 
     button {
