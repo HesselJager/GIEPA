@@ -77,7 +77,7 @@ class Measurement{
 		
 		foreach($xml->children() as $child){
             
-                if(check_station($child->STN)){
+                if(check_station(intval($child->STN))){
                 
                   $measurement =new Measurement();
                   $measurement->stn=intval($child->STN);
