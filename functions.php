@@ -94,8 +94,7 @@ class Measurement{
                   $measurement->frshtt=intval($child->FRSHTT);
                   $measurement->cldc=floatval($child->CLDC);
                   $measurement->wnddir=floatval($child->WNDDIR);
-				  $temp=array($measurement);
-                  $measurements[$measurement->stn]=array_merge($measurements[$measurement->stn],$temp);
+                  $measurements[$measurement->stn]=array_merge($measurements[$measurement->stn],array($measurement));
                
        
                 
