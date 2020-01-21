@@ -72,7 +72,6 @@ class Measurement{
 	*/
 
 	function parse_xml($xml_file){
-		global $station_numbers;
 		global $measurements;
 		$xml = simplexml_load_file($xml_file);
 		
