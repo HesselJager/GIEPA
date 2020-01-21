@@ -121,6 +121,8 @@ body {
 
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 
+      <h6 class="h6 mb-6 font-weight-normal text-danger"><?php echo $error; ?></h6>
+
       <label for="inputEmail" class="sr-only">Username</label>
 
       <input name="username" type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
@@ -128,8 +130,6 @@ body {
       <label for="inputPassword" class="sr-only">Password</label>
 
       <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-
-		<h6 class="h6 mb-6 font-weight-normal"><font color="red"><?php echo $error; ?></font></h6>
 	  
       <div class="checkbox mb-3"></div>
 
