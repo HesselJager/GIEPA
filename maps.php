@@ -78,12 +78,6 @@
     }
   </style>
 </head>
-
-<script type="text/javascript">
-  window.setInterval(function() {
-      showTemp()
-  }, 1000);
-</script>
  <body>
 
   <!--<header><img src="https://www.giepa.gm/sites/default/files/logo-giepa.png" alt="" style="height: 80%;
