@@ -32,15 +32,13 @@
 	
 
 
-/*This array holds the station numbers of the stations that are required in our weatherapplication.
-Incoming data will be filtered on these numbers by the function: parse_xml
-The numbers must be inserted in string format
-*/
-$station_numbers=array(); 
+
+
 
 /*This array will hold the required data for the weather application, 
 in the form of a measurement object
-The key for this array must be a number of a weather station, in string format
+The key is the stationnumber, the value is an array of the measurement objects belonging to the the 
+station.
 */
 $measurements=array();
 
@@ -68,7 +66,7 @@ class Measurement{
 
 
 
-	/*This function parses an xml file and filters based on the stationnummer
+	/*This function parses an xml file and filters based on the stationnumber
 	 If the stationnumber belongs to a station that is needed an object will be created 
 	 The object will be put in the measurements array
 	*/
@@ -79,11 +77,11 @@ class Measurement{
 		$xml = simplexml_load_file($xml_file);
 		
 		foreach($xml->children() as $child){
-            foreach($station_numbers as $station_id){
-                if($station_id==$child->STN){
+            
+                if(check_station($child->STN)){
                 
                   $measurement =new Measurement();
-                  $measurement->stn=strval($child->STN);
+                  $measurement->stn=intval($child->STN);
                   $measurement->date=date($child->DATE);
                   $measurement->time=strval($child->TIME);
                   $measurement->temp=floatval($child->TEMP);
@@ -97,10 +95,10 @@ class Measurement{
                   $measurement->frshtt=intval($child->FRSHTT);
                   $measurement->cldc=floatval($child->CLDC);
                   $measurement->wnddir=floatval($child->WNDDIR);
-                  $measurements[$measurement->stn]=$measurement;
+                  $measurements[$measurement->stn].array_push($measurement);
                
                     
-                }
+                
                 
             }
             
