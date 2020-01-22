@@ -87,8 +87,27 @@ class Measurement{
 		}
 		
 	}
-
-
+/*
+This function reads an directory of xml_files and uses the parse_xml function al these files
+*/
+function parse_xml_dir($dir){
+	$dir="/".$dir."/";
+	if (is_dir($dir)){
+		 if ($dh = opendir($dir)){
+    while (($file = readdir($dh)) !== false){
+		parse_xml($dir.$file);
+      
+    }
+    closedir($dh);
+       }
+		
+		
+		
+	}
+	
+	
+	
+}
 
          
 
