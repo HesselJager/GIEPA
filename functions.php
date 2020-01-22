@@ -109,14 +109,7 @@ function parse_xml_dir($dir){
 	
 	
 }
-/*
-This function sorts and array that holds multiple $measurement objects based on the date and time
 
-*/
-function time_based_sort($array){
-	
-}
-         
 
 
 
