@@ -41,10 +41,11 @@
 	  -moz-user-select: none;
 	  -webkit-user-select: none;
 	  -ms-user-select: none;
+    height: 80%;
 	}
     /*set style for content divider*/
     #content{
-    	min-height: 70%;
+    	min-height: 24%;
     }
     /*set style for navigation bar*/
     .navbar {
@@ -67,7 +68,7 @@
     }
     /*set style for footer*/
     footer {
-      height: 20%;
+      height: 10%;
       width: 100%;
       background-color: #184893;
       padding: 0px;
@@ -210,6 +211,8 @@
 	  showTemp() 
 	}, 1000);
   </script>
+  <div id="content"></div>
+  <footer></footer>
   <!--Closing scripts for bootstrap-->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 

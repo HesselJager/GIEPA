@@ -33,7 +33,7 @@
     }
     /*set style for content divider*/
     #content{
-      min-height: 70%;
+      min-height: 80%;
     }
     /*set style for navigation bar*/
     .navbar {
@@ -56,7 +56,7 @@
     }
     /*set style for footer*/
     footer {
-      height: 20%;
+      height: 10%;
       width: 100%;
       background-color: #184893;
       padding: 0px;
