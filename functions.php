@@ -47,8 +47,7 @@ $measurements=array_fill_keys($allowed_stations,array());
 //This class creates a measurement object, which holds data of a measuremnt in a weatherstation
 class Measurement{
     public $stn;
-    public $date;
-    public $time;
+    public $date_and_time;
     public $temp;
     public $wdsp;
     public $wnddir; 
@@ -74,8 +73,7 @@ class Measurement{
                 
                   $measurement =new Measurement();
                   $measurement->stn=intval($child->STN);
-                  $measurement->date=date($child->DATE);
-                  $measurement->time=strval($child->TIME);
+				  $measurement->date_and_time=date_create($child->DATE." ".$child->TIME);
                   $measurement->temp=floatval($child->TEMP);
                   $measurement->wdsp=floatval($child->WDSP);
                   $measurement->wnddir=floatval($child->WNDDIR);
@@ -111,7 +109,13 @@ function parse_xml_dir($dir){
 	
 	
 }
+/*
+This function sorts and array that holds multiple $measurement objects based on the date and time
 
+*/
+function time_based_sort($array){
+	
+}
          
 
 
