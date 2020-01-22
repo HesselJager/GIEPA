@@ -49,15 +49,7 @@ class Measurement{
     public $date;
     public $time;
     public $temp;
-    public $dewp;
-    public $stp;
-    public $slp;
-    public $visib;
     public $wdsp;
-    public $prcp;
-    public $sndp;
-    public $frshtt;
-    public $cldc;
     public $wnddir; 
 }
 
@@ -84,15 +76,7 @@ class Measurement{
                   $measurement->date=date($child->DATE);
                   $measurement->time=strval($child->TIME);
                   $measurement->temp=floatval($child->TEMP);
-                  $measurement->dewp=floatval($child->DEWP);
-                  $measurement->stp=floatval($child->STP);
-                  $measurement->slp=floatval($child->SLP);
-                  $measurement->visib=floatval($child->VISIB);
                   $measurement->wdsp=floatval($child->WDSP);
-                  $measurement->prcp=floatval($child->PRCP);
-                  $measurement->sndp=floatval($child->SNDP);
-                  $measurement->frshtt=intval($child->FRSHTT);
-                  $measurement->cldc=floatval($child->CLDC);
                   $measurement->wnddir=floatval($child->WNDDIR);
                   $measurements[$measurement->stn]=array_merge($measurements[$measurement->stn],array($measurement));
                
