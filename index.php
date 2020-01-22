@@ -52,7 +52,7 @@
       padding: 15px;
       margin: auto;
     }
-    /*set style for sin
+    set style for sin
     .form-signin .checkbox {
       font-weight: 400;
     }
