@@ -103,6 +103,7 @@
   <div id="map"></div>
   <!--Script to get the map on the webpage-->
   <script>
+    var map, infoWindowGeolocation;
     //this function initiates the map
     function initMap() {
       //set the waypoints for the weather stations
@@ -115,10 +116,44 @@
       var south_atlantic_ocean_5  = {lat: -51.683,  lng: -57.767};  // 888910
       var south_atlantic_ocean_6  = {lat: -40.35,   lng: -9.883};   // 689060
       //create a map element
-      var map = new google.maps.Map(document.getElementById('map'), {
+      map = new google.maps.Map(document.getElementById('map'), {
         zoom: 4,
         center: gambia 
       });
+
+      // Geo-locate current position
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+          // Make infoWindow for geo-location
+          infoWindowGeolocation = new google.maps.InfoWindow;
+          infoWindowGeolocation.setPosition(pos);
+          infoWindowGeolocation.setContent('Your current location');
+          // Make custom marker for current location
+          var markerGeolocation = new google.maps.Marker( {
+            position: pos,
+            map: map,
+            title: 'Your current location',
+            icon: {
+              url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+            }
+          })
+          // Add event for mouseclick 
+          markerGeolocation.addListener('click', function() {
+            infoWindowGeolocation.open(map);
+          })
+          // Error handling
+        }, function() {
+          handleLocationError(true, infoWindowGeolocation, map.getCenter());
+        });
+      } else {
+        // Browser doesn't support Geo-location
+        handleLocationError(false, infoWindowGeolocation, map.getCenter());
+      }
+
       /* Weather Station Gambia */
       var contentStringGambia = '<div id="content">'+
           '<h5>BANJUL/YUNDUM</h5>' +
@@ -231,6 +266,15 @@
       markerSouthAtlantic6.addListener('click', function() {
         infowindowSouthAtlantic6.open(map, markerSouthAtlantic6);
       });
+    }
+
+    // This function handles errors for geolocation
+    function handleLocationError(browserHasGeolocation, infoWindowGeolocation, pos) {
+      infoWindowGeolocation.setPosition(pos);
+      infoWindowGeolocation.setContent(browserHasGeolocation ?
+         'Error: The Geolocation service failed.' :
+         'Error: Your browser doesn\'t support geolocation.');
+      infoWindowGeolocation.open(map);
     }
   </script>
   <!--Load the API from the specified URL
