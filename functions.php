@@ -19,9 +19,10 @@
 			header('location: index.php');
 		}
 	}
-
+$allowed_stations = array(617010, 85940, 619020, 889030, 888890, 888900, 888910, 689060);
 	function check_station($station) {
-		$allowed_stations = array(617010, 85940, 619020, 889030, 888890, 888900, 888910, 689060);
+		global $allowed_stations;
+		
 	
 		if(in_array($station, $allowed_stations)) {
 			return true;
@@ -40,7 +41,7 @@ in the form of a measurement object
 The key is the stationnumber, the value is an array of the measurement objects belonging to the 
 station, holding this stationnumber.
 */
-$measurements=array_fill_keys(array(617010, 85940, 619020, 889030, 888890, 888900, 888910, 689060),array());
+$measurements=array_fill_keys($allowed_stations,array());
 
 
 //This class creates a measurement object, which holds data of a measuremnt in a weatherstation
@@ -69,7 +70,7 @@ class Measurement{
 		
 		foreach($xml->children() as $child){
             
-                if(check_station(intval($child->STN))){
+                
                 
                   $measurement =new Measurement();
                   $measurement->stn=intval($child->STN);
@@ -82,7 +83,7 @@ class Measurement{
                
        
                 
-            }
+            
             
 		}
 		
@@ -91,12 +92,14 @@ class Measurement{
 This function reads an directory of xml_files and uses the parse_xml function al these files
 */
 function parse_xml_dir($dir){
+	
 	$dir="/".$dir."/";
 	if (is_dir($dir)){
 		 if ($dh = opendir($dir)){
     while (($file = readdir($dh)) !== false){
+		if(check_station(substr($file,0,-4)      )){
 		parse_xml($dir.$file);
-      
+		}
     }
     closedir($dh);
        }
