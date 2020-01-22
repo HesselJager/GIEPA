@@ -13,7 +13,7 @@
 		<TIME>15:59:46</TIME>
 		
 		<!-- Temperatuur in graden Celsius, geldige waardes van -9999.9 t/m 9999.9 met 1 decimaal -->
-		<TEMP>-60.1</TEMP>
+		<TEMP>60</TEMP>
 		
 		<!-- Dauwpunt in graden Celsius, geldige waardes van -9999.9 t/m 9999.9 met 1 decimaal -->
 		<DEWP>-58.1</DEWP>

@@ -80,7 +80,7 @@ class Measurement{
                   $measurement->wdsp=floatval($child->WDSP);
                   $measurement->wnddir=floatval($child->WNDDIR);
                   $measurements[$measurement->stn]=array_merge($measurements[$measurement->stn],array($measurement));
-               
+			      
        
                 
             
@@ -92,12 +92,12 @@ class Measurement{
 This function reads an directory of xml_files and uses the parse_xml function al these files
 */
 function parse_xml_dir($dir){
+	$dir=$dir."/";
 	
-	$dir="/".$dir."/";
 	if (is_dir($dir)){
 		 if ($dh = opendir($dir)){
     while (($file = readdir($dh)) !== false){
-		if(check_station(substr($file,0,-4)      )){
+		if(check_station(intval(substr($file,0,-4) ))){
 		parse_xml($dir.$file);
 		}
     }

@@ -76,6 +76,7 @@
     crossorigin="anonymous">
   </script>
   <script>
+	var getParam=window.location.search;
 	var config = {
 			type: 'line',
 			data: {
@@ -139,7 +140,7 @@
 		           	addData(window.myLine, '', this.responseText);
 		        }
 		    }
-		    xmlhttp.open("GET", "ajax_temperature.php", true);
+		    xmlhttp.open("GET", "ajax_temperature.php"+getParam, true);
 		    xmlhttp.send();
 		}
 		
