@@ -1,5 +1,5 @@
 <?php
 
-	echo "Temperature: " . rand(18, 20) . "°C";
+	echo rand(12, 20);
 
 ?>
