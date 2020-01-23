@@ -139,7 +139,7 @@
 	  data: {
 	    labels: [],
 	    datasets: [{
-	      label: 'Temperature',
+	      label: 'Windspeed in km/h',
 	      data: [],
 	      fill: false,
 	    }]
@@ -150,7 +150,7 @@
 		responsive: true,
 		title: {
 		  display: true,
-		  text: 'Temperature'
+		  text: 'Windspeed in km/h'
 		},
 		//tooltip options
 	    tooltips: {
@@ -176,7 +176,7 @@
 		  yAxes: [{
 		    scaleLabel: {
 			  display: true,
-			  labelString: 'Temperature',
+			  labelString: 'Windspeed in km/h',
 			}
 	      }]
 		}
@@ -237,10 +237,9 @@
 	}
 	   //function to show table with weatherdata
 	function showTable(){
-	  {
 	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
-	      if (this.readyState == 4 && this.status == 200) 
+	      if (this.readyState == 4 && this.status == 200) {
 			//fill the table
 	    }
 	  }
@@ -250,7 +249,7 @@
 	
 	//Interval for showtemp function
 	window.setInterval(function() {
-	  showTemp(); 
+	  showWdsp(); 
 	  removeData(window.myLine);
 	}, 1000);
 
