@@ -1,4 +1,4 @@
 <?php
 	
-	echo file_get_contents("xml_files/".intval($_GET["station"]).".xml");
+	echo file_get_contents("xml_files/".$_GET["station"].".xml");
 ?>
