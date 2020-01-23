@@ -114,9 +114,9 @@
   </nav>
   <!--container divider-->
   <div class="container">
-	<div style="width:75%;">
+	<div style="width:75%; float: right; margin-right: -11%;">
 	  <!--Canvas here-->
-	  <canvas id="canvas"></canvas>
+	  <canvas id="canvas" style=""></canvas>
     </div>
     <!--Code that checks if error message needs to be displayed-->
     <?php
@@ -127,8 +127,14 @@
 	  }
     ?>
   </div>
-  <div id="demo"></div>
-  <!--Create linegraph-->
+  <div id="content">
+  	<?php 
+  		echo "<h2 style='text-align: center;'>" . get_station_name($station_id) . "</h2>";
+  	?>
+
+  	<div id="current_temperature"></div>
+  	<div id="current_wind_direction"></div>
+  </div>
   <script>
 	var getParam=window.location.search;
 	//set configuration variable
@@ -255,8 +261,7 @@
 
 
   </script>
-  <div id="content"></div>
-  <footer></footer>
+  <!--<footer></footer>-->
   <!--Closing scripts for bootstrap-->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
