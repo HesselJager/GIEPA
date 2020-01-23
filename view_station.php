@@ -114,9 +114,9 @@
   </nav>
   <!--container divider-->
   <div class="container">
-	<div style="width:75%;">
+	<div style="width:75%; float: right; margin-right: -11%;">
 	  <!--Canvas here-->
-	  <canvas id="canvas"></canvas>
+	  <canvas id="canvas" style=""></canvas>
     </div>
     <!--Code that checks if error message needs to be displayed-->
     <?php
@@ -127,9 +127,17 @@
 	  }
     ?>
   </div>
-  <div id="demo"></div>
-  <!--Create linegraph-->
+  <div id="content">
+  	<?php 
+  		echo "<h2 style='text-align: center;'>" . get_station_name($station_id) . "</h2>";
+  	?>
+
+  	<div id="current_temperature"></div>
+  	<div id="current_wind_direction"></div>
+  </div>
   <script>
+  parser = new DOMParser();
+
 	var getParam=window.location.search;
 	//set configuration variable
 	var config = {
@@ -139,7 +147,7 @@
 	  data: {
 	    labels: [],
 	    datasets: [{
-	      label: 'Temperature',
+	      label: 'Windspeed in km/h',
 	      data: [],
 	      fill: false,
 	    }]
@@ -150,7 +158,7 @@
 		responsive: true,
 		title: {
 		  display: true,
-		  text: 'Temperature'
+		  text: 'Windspeed in km/h'
 		},
 		//tooltip options
 	    tooltips: {
@@ -176,7 +184,7 @@
 		  yAxes: [{
 		    scaleLabel: {
 			  display: true,
-			  labelString: 'Temperature',
+			  labelString: 'Windspeed in km/h',
 			}
 	      }]
 		}
@@ -237,12 +245,14 @@
 	}
 	   //function to show table with weatherdata
 	function showTable(){
-	  {
 	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
-	      if (this.readyState == 4 && this.status == 200) 
-			//fill the table
-	    }
+	      if (this.readyState == 4 && this.status == 200) {
+				xmlDoc = parser.parseFromString(text,this.responseText);
+				xmlDoc.getElementsByTagName("MEASUREMENT");
+			
+			
+	    
 	  }
 	  xmlhttp.open("GET", "ajax_table.php"+getParam, true);
 	  xmlhttp.send();
@@ -250,14 +260,13 @@
 	
 	//Interval for showtemp function
 	window.setInterval(function() {
-	  showTemp(); 
+	  showWdsp(); 
 	  removeData(window.myLine);
 	}, 1000);
 
 
   </script>
-  <div id="content"></div>
-  <footer></footer>
+  <!--<footer></footer>-->
   <!--Closing scripts for bootstrap-->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
