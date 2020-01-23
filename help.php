@@ -29,6 +29,9 @@
     /*set style for content divider*/
     #content{
     	min-height: 80%;
+		/*border: 5px;
+		border-style: solid;
+		border-color: #184893;*/
     }
     /*set style for navigation bar*/
     .navbar {
@@ -41,7 +44,7 @@
       line-height: 80px;
     }
 	/*set style for tekst blok*/
-    #tekstBlokMetWelkom{ 
+    #tekstBlokMetHelp{ 
       width: 80%;
       padding: 0px;
       margin: 0px;
@@ -83,13 +86,6 @@
       .bd-placeholder-img-lg {
         font-size: 3.5rem;
       }
-	/*Made to center fish*/
-	.center {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 30%;
-	 }
     }
   </style>
 </head>
@@ -107,19 +103,23 @@
       <div class="navbar-nav" style="font-size: 20px;">
         <a class="nav-item nav-link" href="home.php" style="color: #fff;">Home</a>
         <a class="nav-item nav-link" href="maps.php" style="color: #fff;">Stations</a>
-        <a class="nav-item nav-link" href="help.php" style="color: #fff;">Help</a>
+		<a class="nav-item nav-link" href="help.php" style="color: #fff;">Help</a>
         <a class="nav-item nav-link" href="logout.php" style="color: #fff;">Log out</a>
       </div>
     </div>
   </nav>
+  
   <!--content divider-->
   <div id="content">
-	<div id="tekstBlokMetWelkom">
-	<h1 style="color:#184893">Welcome!</h1>
-	Welcome to the webpage of GIEPA's Weather Application. This webpage will give you information about the weather in The Gambia and the surrounding seas. 
-	With the information that this website provides you will be able to see the best spot to fish at this current time. 
+	<div id="tekstBlokMetHelp">
+	<h1 style="color:#184893">Help</h1>
+	Hello and welcome to the webpage of GIEPA's Weather Application. On this webpage you'll be able to see information about both temperture and wind in and surrounding The Gambia. <br>
+	In the "Home" tab you will find a general overview of the information about the wind and temperature. The "Stations" tab is for more region specific information regarding the weather. <br>
+	In the "Stations" tab you will see a map with multiple red markers and one blue marker. The red markers represent weather stations and the blue marker your current position. Clicking one of these red markers will give you
+	information about the the temperature and wind speed and wind direction given by the weather station. You can choose between viewing the information in a graph or in a table. 
+	The table can be downloaded by pressing the "Download table" button.
+	
 	</div>
-	<img src="https://previews.123rf.com/images/redneks/redneks1504/redneks150400005/39278476-illustration-with-realistic-fish-hand-draw-.jpg" width="360" height="250" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A; " class="center">
   </div>
   <!--footer-->
   <footer></footer>

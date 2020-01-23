@@ -114,9 +114,9 @@
   </nav>
   <!--container divider-->
   <div class="container">
-	<div style="width:75%;">
+	<div style="width:75%; float: right; margin-right: -11%;">
 	  <!--Canvas here-->
-	  <canvas id="canvas"></canvas>
+	  <canvas id="canvas" style=""></canvas>
     </div>
     <!--Code that checks if error message needs to be displayed-->
     <?php
@@ -127,8 +127,17 @@
 	  }
     ?>
   </div>
-  <!--Create linegraph-->
+  <div id="content">
+  	<?php 
+  		echo "<h2 style='text-align: center;'>" . get_station_name($station_id) . "</h2>";
+  	?>
+
+  	<div id="current_temperature"></div>
+  	<div id="current_wind_direction">Current wind direction: </div>
+  </div>
   <script>
+  parser = new DOMParser();
+
 	var getParam=window.location.search;
 	//set configuration variable
 	var config = {
@@ -138,9 +147,8 @@
 	  data: {
 	    labels: [],
 	    datasets: [{
-	      label: 'Temperature',
-	      data: [
-	      ],
+	      label: 'Windspeed in km/h',
+	      data: [],
 	      fill: false,
 	    }]
 	  },
@@ -150,7 +158,7 @@
 		responsive: true,
 		title: {
 		  display: true,
-		  text: 'Temperature'
+		  text: 'Windspeed in km/h'
 		},
 		//tooltip options
 	    tooltips: {
@@ -176,17 +184,19 @@
 		  yAxes: [{
 		    scaleLabel: {
 			  display: true,
-			  labelString: 'Temperature',
+			  labelString: 'Windspeed in km/h',
 			}
 	      }]
 		}
 	  }
 	};
+
 	//Load data onto graph
 	window.onload = function() {
 	  var ctx = document.getElementById('canvas').getContext('2d');
 	  window.myLine = new Chart(ctx, config);
 	};
+
 	//Add data
 	function addData(chart, label, data) {
 	  chart.data.labels.push(label);
@@ -195,25 +205,76 @@
 	  });
 	  chart.update();
 	}
-	//function to show temperature
+
+	//Remove data
+	//After two minutes remove the first value from the data array
+	function removeData(chart) {
+      if(Object.keys(window.myLine.data.datasets[0].data).length == 120) {
+      	chart.data.labels.shift();
+	    chart.data.datasets.forEach((dataset) => {
+	        dataset.data.shift();
+	    });
+	    chart.update();
+		}
+	}
+
+	//function to show wind direction
+	function showWnddir(){
+	    var xmlhttp = new XMLHttpRequest();
+	    xmlhttp.onreadystatechange = function() {
+	      if (this.readyState == 4 && this.status == 200) 
+          document.getElementById("current_wind_direction").innerHTML = this.responseText;
+	    }
+	  xmlhttp.open("GET", "ajax_wind_direction.php"+getParam, true);
+	  xmlhttp.send();
+	}
+	    //function to show temperature
 	function showTemp() {
-	  {
 	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
 	      if (this.readyState == 4 && this.status == 200) 
           addData(window.myLine, '', this.responseText);
-	    }
+	    
 	  }
 	  xmlhttp.open("GET", "ajax_temperature.php"+getParam, true);
 	  xmlhttp.send();
 	}
+	
+    //function to show wind speed
+	function showWdsp() {
+	    var xmlhttp = new XMLHttpRequest();
+	    xmlhttp.onreadystatechange = function() {
+	      if (this.readyState == 4 && this.status == 200) 
+          addData(window.myLine, '', this.responseText);
+	    
+	  }
+	  xmlhttp.open("GET", "ajax_wind_speed.php"+getParam, true);
+	  xmlhttp.send();
+	}
+	   //function to show table with weatherdata
+	function showTable(){
+	    var xmlhttp = new XMLHttpRequest();
+	    xmlhttp.onreadystatechange = function() {
+	      if (this.readyState == 4 && this.status == 200) {
+				xmlDoc = parser.parseFromString(text,this.responseText);
+				xmlDoc.getElementsByTagName("MEASUREMENT");
+			
+	    }
+	  }
+	  xmlhttp.open("GET", "ajax_table.php"+getParam, true);
+	  xmlhttp.send();
+	}
+	
 	//Interval for showtemp function
 	window.setInterval(function() {
-	  showTemp() 
+	  showWdsp(); 
+	  removeData(window.myLine);
+	  showWnddir();
 	}, 1000);
+
+
   </script>
-  <div id="content"></div>
-  <footer></footer>
+  <!--<footer></footer>-->
   <!--Closing scripts for bootstrap-->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
