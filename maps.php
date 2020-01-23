@@ -141,6 +141,17 @@
     //initialize content string South Atlantic station 6
     var contentStringSouthAtlantic6 = contentStringOpen+'GOUGH ISLAND'       +contentStringMiddle+'689060'+contentStringEnd;
 
+    /* This function closes the current infoWindow and opens a new one
+     *
+     * map:           The map in use
+     * info_window:   Corresponding infoWindow of clicked marker
+     */
+    function clickEvent(map, info_window) {
+      activeInfoWindow.close(map);
+      activeInfoWindow = info_window;
+      activeInfoWindow.open(map);
+    }
+
     //this function initiates the map
     function initMap() {
       //initialize coordinate variables for the weather stations and geolocation
@@ -260,63 +271,37 @@
         content: contentStringSouthAtlantic6
       });
 
-      //after 1,5 seconds open infoWindow for Gambia station and link it to activeInfoWindow variable
-      setTimeout(function() {
-        infoWindowGambia.open(map);
-        activeInfoWindow = infoWindowGambia;
-      }, 1500);
-
-      /* With these listeners only one infoWindow will be open at a time
-       * The infoWindow that is open is always linked to activeInfoWindow
-       * Which will close, re-link and open back up once a station is clicked
-       */
       //add mouse click Listener for Gambia marker
       markerGambia.addListener('click', function() {
-        activeInfoWindow.close(map);
-        activeInfoWindow = infoWindowGambia;
-        activeInfoWindow.open(map);
+        clickEvent(map, infoWindowGambia);
       });
       //add mouse click Listener for Atlantic marker
       markerAtlantic.addListener('click', function() {
-        activeInfoWindow.close(map);
-        activeInfoWindow = infoWindowAtlantic;
-        activeInfoWindow.open(map);
+        clickEvent(map, infoWindowAtlantic);
       });
       //add mouse click Listener for South Atlantic marker 1
       markerSouthAtlantic1.addListener('click', function() {
-        activeInfoWindow.close(map);
-        activeInfoWindow = infoWindowSouthAtlantic1;
-        activeInfoWindow.open(map);
+        clickEvent(map, infoWindowSouthAtlantic1);
       });
       //add mouse click Listener for South Atlantic marker 2
       markerSouthAtlantic2.addListener('click', function() {
-        activeInfoWindow.close(map);
-        activeInfoWindow = infoWindowSouthAtlantic2;
-        activeInfoWindow.open(map);
+        clickEvent(map, infoWindowSouthAtlantic2);
       });
       //add mouse click Listener for South Atlantic marker 3
       markerSouthAtlantic3.addListener('click', function() {
-        activeInfoWindow.close(map);
-        activeInfoWindow = infoWindowSouthAtlantic3;
-        activeInfoWindow.open(map);
+        clickEvent(map, infoWindowSouthAtlantic3);
       });
       //add mouse click Listener for South Atlantic marker 4
       markerSouthAtlantic4.addListener('click', function() {
-        activeInfoWindow.close(map);
-        activeInfoWindow = infoWindowSouthAtlantic4;
-        activeInfoWindow.open(map);
+        clickEvent(map, infoWindowSouthAtlantic4);
       });
       //add mouse click Listener for South Atlantic marker 5
       markerSouthAtlantic5.addListener('click', function() {
-        activeInfoWindow.close(map);
-        activeInfoWindow = infoWindowSouthAtlantic5;
-        activeInfoWindow.open(map);
+        clickEvent(map, infoWindowSouthAtlantic5);
       });
       //add mouse click Listener for South Atlantic marker 6
       markerSouthAtlantic6.addListener('click', function() {
-        activeInfoWindow.close(map);
-        activeInfoWindow = infoWindowSouthAtlantic6;
-        activeInfoWindow.open(map);
+        clickEvent(map, infoWindowSouthAtlantic6);
       });
 
       /* These listeners are made for ease of use.
@@ -362,7 +347,7 @@
        * a custom marker, infoWindow and click Listener for your current location
        */
       //check for access to geolocation
-      if (navigator.geolocation) {
+      if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
           //format coordinates such that google maps API can read it, and save it in a variable
           pos_geolocation = {
@@ -380,13 +365,12 @@
           });
           //create infoWindow for geolocation marker
           infoWindowGeolocation = new google.maps.InfoWindow( {
+            position: pos_geolocation,
             content: 'Your current location'
           });
           //add mouse click Listener to geolocation marker
           markerGeolocation.addListener('click', function() {
-            activeInfoWindow.close(map);
-            activeInfoWindow = infoWindowGeolocation;
-            activeInfoWindow.open(map, markerGeolocation);
+            clickEvent(map, infoWindowGeolocation);
           });
         }, 
         //browser supports geolocation, but an error still occurred
@@ -397,8 +381,12 @@
         //browser doesn't support geolocation
         handleLocationError(false, infoWindowGeolocation, map.getCenter());
       }
+      //open Gambia infoWindow and link to activeInfoWindow after 1500ms
+      setTimeout(function() {
+        infoWindowGambia.open(map);
+        activeInfoWindow = infoWindowGambia;
+      }, 1500);
     }
-
     // This function handles errors for geolocation
     function handleLocationError(browserHasGeolocation, infoWindowGeolocation, pos_geolocation) {
       infoWindowGeolocation.setPosition(pos_geolocation);
