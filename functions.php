@@ -2,6 +2,12 @@
 	// Set username and password
 	$USER_USERNAME = "user";
 	$USER_PASSWORD = '$argon2i$v=19$m=1024,t=2,p=2$RGVNME4weFFwMmMyd01IZw$a28OeXYplLovOamT/0VITKf3kMsWi+mQVMJjAVKlxcw'; // GAINEXPRAG2020
+
+	// Array of the stations used for this project
+	$allowed_stations = array(617010, 85940, 619020, 889030, 888890, 888900, 888910, 689060);
+
+	// Array with the names of the stations, the names are at the exact locations as the $allowes_stations array
+	$station_locations = array("BANJUL/YUNDUM", "SAL", "WIDE AWAKE FIELD", "GRYTVIKEN S.GEORGIA", "MOUNT PLEASANT AIRP", "STANLEY", "STANLEY AIRPORT", "GOUGH ISLAND");
 	/* This function compares username and password credentials
 	 * and checks if the input is correct
 	 */
@@ -34,6 +40,19 @@
 		} else {
 			return false;
 		}
+	}
+
+	/* This function returns the name of a station. It uses the key of
+	 * the $allowed_stations array to search the $station_locations array
+	 */
+	function get_station_name($station) {
+		global $allowed_stations, $station_locations;
+
+		$key = array_search($station, $allowed_stations);
+
+		$name = $station_locations[$key];
+
+		return $name;
 	}
 	/* This array will hold the required data for the weather application, 
 	 * in the form of a measurement object
