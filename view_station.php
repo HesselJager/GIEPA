@@ -210,7 +210,8 @@
 	
 	//function to show wind direction
 	function showWnddir(){
-			    var xmlhttp = new XMLHttpRequest();
+	  {
+	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
 	      if (this.readyState == 4 && this.status == 200) 
           addData(window.myLine, '', this.responseText);
@@ -221,8 +222,9 @@
 	}
 	
     //function to show wind speed
-	function showWdsp(){
-			    var xmlhttp = new XMLHttpRequest();
+	function showW(){
+	  {
+	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
 	      if (this.readyState == 4 && this.status == 200) 
           addData(window.myLine, '', this.responseText);
