@@ -239,7 +239,7 @@
 	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
 	      if (this.readyState == 4 && this.status == 200) 
-          addData(window.myLine, '', this.responseText);
+			//fill the table
 	    }
 	  }
 	  xmlhttp.open("GET", "ajax_table.php"+getParam, true);
