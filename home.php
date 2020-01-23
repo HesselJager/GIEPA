@@ -40,6 +40,15 @@
       height: 10%;
       line-height: 80px;
     }
+	/*set style for tekst blok*/
+    #tekstBlokMetWelkom{ 
+      width: 80%;
+      padding: 0px;
+      margin: 0px;
+      border: 0px;
+	  margin: auto;
+	  padding-top: 2%;
+    }
     /*set style for header*/
     header{
       height: 150px;  
@@ -74,6 +83,13 @@
       .bd-placeholder-img-lg {
         font-size: 3.5rem;
       }
+	/*Made to center fish*/
+	.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	 }
     }
   </style>
 </head>
@@ -84,7 +100,7 @@
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #DC292A; ">
     <!--GIEPA logo-->
     <a class="navbar-brand" href="#">
-      <img src="https://www.giepa.gm/sites/default/files/logo-giepa.png" width="120" height="40" alt="" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
+      <img src="https://www.giepa.gm/sites/default/files/logo-giepa.png" width="180" height="60" alt="" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
     </a>
     <!--Links to homepage, stations and logout-->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -97,7 +113,14 @@
     </div>
   </nav>
   <!--content divider-->
-  <div id="content"></div>
+  <div id="content">
+	<div id="tekstBlokMetWelkom">
+	<h1 style="color:#184893">Welcome!</h1>
+	Welcome to the webpage of GIEPA's Weather Application. This webpage will give you information about the weather in The Gambia and the surrounding seas. 
+	With the information that this website provides you will be able to see the best spot to fish at this current time. 
+	</div>
+	<img src="https://previews.123rf.com/images/redneks/redneks1504/redneks150400005/39278476-illustration-with-realistic-fish-hand-draw-.jpg" width="360" height="250" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A; " class="center">
+  </div>
   <!--footer-->
   <footer></footer>
   <!--Closing scripts for bootstrap-->
