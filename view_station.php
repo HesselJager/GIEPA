@@ -230,13 +230,12 @@
 	}
 	
     //function to show wind speed
-	function showWdsp(){
-	  {
+	function showWdsp() {
 	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
 	      if (this.readyState == 4 && this.status == 200) 
           addData(window.myLine, '', this.responseText);
-	    }
+	    
 	  }
 	  xmlhttp.open("GET", "ajax_wind_speed.php"+getParam, true);
 	  xmlhttp.send();
@@ -249,8 +248,7 @@
 				xmlDoc = parser.parseFromString(text,this.responseText);
 				xmlDoc.getElementsByTagName("MEASUREMENT");
 			
-			
-	    
+	    }
 	  }
 	  xmlhttp.open("GET", "ajax_table.php"+getParam, true);
 	  xmlhttp.send();
