@@ -126,6 +126,7 @@
 	  }
     ?>
   </div>
+  <div id="demo"></div>
   <!--Create linegraph-->
   <script>
 	var getParam=window.location.search;
@@ -138,8 +139,7 @@
 	    labels: [],
 	    datasets: [{
 	      label: 'Temperature',
-	      data: [
-	      ],
+	      data: [],
 	      fill: false,
 	    }]
 	  },
@@ -181,11 +181,13 @@
 		}
 	  }
 	};
+
 	//Load data onto graph
 	window.onload = function() {
 	  var ctx = document.getElementById('canvas').getContext('2d');
 	  window.myLine = new Chart(ctx, config);
 	};
+
 	//Add data
 	function addData(chart, label, data) {
 	  chart.data.labels.push(label);
@@ -194,6 +196,20 @@
 	  });
 	  chart.update();
 	}
+
+	//Remove data
+	//After two minutes remove the first value from the data array
+	function removeData(chart) {
+      if(Object.keys(window.myLine.data.datasets[0].data).length == 120) {
+      	chart.data.labels.shift();
+	    chart.data.datasets.forEach((dataset) => {
+	        dataset.data.shift();
+	    });
+	    chart.update();
+		}
+	}
+
+
 	//function to show temperature
 	function showTemp() {
 	  {
@@ -206,10 +222,14 @@
 	  xmlhttp.open("GET", "ajax_temperature.php"+getParam, true);
 	  xmlhttp.send();
 	}
+
 	//Interval for showtemp function
 	window.setInterval(function() {
-	  showTemp() 
+	  showTemp(); 
+	  removeData(window.myLine);
 	}, 1000);
+
+
   </script>
   <div id="content"></div>
   <footer></footer>
