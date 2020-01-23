@@ -207,6 +207,35 @@
 	  xmlhttp.open("GET", "ajax_temperature.php"+getParam, true);
 	  xmlhttp.send();
 	}
+	
+	//function to show wind direction
+	function showWnddir(){
+			    var xmlhttp = new XMLHttpRequest();
+	    xmlhttp.onreadystatechange = function() {
+	      if (this.readyState == 4 && this.status == 200) 
+          addData(window.myLine, '', this.responseText);
+	    }
+	  }
+	  xmlhttp.open("GET", "ajax_wind_direction.php"+getParam, true);
+	  xmlhttp.send();
+	}
+	
+    //function to show wind speed
+	function showWdsp(){
+			    var xmlhttp = new XMLHttpRequest();
+	    xmlhttp.onreadystatechange = function() {
+	      if (this.readyState == 4 && this.status == 200) 
+          addData(window.myLine, '', this.responseText);
+	    }
+	  }
+	  xmlhttp.open("GET", "ajax_wind_speed.php"+getParam, true);
+	  xmlhttp.send();
+	}
+	
+	
+	
+	
+	
 	//Interval for showtemp function
 	window.setInterval(function() {
 	  showTemp() 
