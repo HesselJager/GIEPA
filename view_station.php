@@ -222,7 +222,7 @@
 	}
 	
     //function to show wind speed
-	function showW(){
+	function showWdsp(){
 	  {
 	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
