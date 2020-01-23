@@ -112,34 +112,39 @@
       markerSouthAtlantic2, markerSouthAtlantic3, markerSouthAtlantic5, markerSouthAtlantic6;
 
     //initialize infoWindow variables
-    var infoWindowGeolocation, infoWindowGambia, infoWindowAtlantic, infoWindowSouthAtlantic1,
-      infoWindowSouthAtlantic2, infoWindowSouthAtlantic3, infoWindowSouthAtlantic4,
-      infoWindowSouthAtlantic5, infoWindowSouthAtlantic6;
+    var activeInfoWindow, infoWindowGeolocation, infoWindowGambia, infoWindowAtlantic, 
+      infoWindowSouthAtlantic1, infoWindowSouthAtlantic2, infoWindowSouthAtlantic3, 
+      infoWindowSouthAtlantic4, infoWindowSouthAtlantic5, infoWindowSouthAtlantic6;
 
-    //initialize activeInfowWindow variable
-    var activeInfoWindow;
-
-    //initialize repeat strings for content string variables
+    //initialize and set repeat strings for contentString variables
     var contentStringOpen    = '<div id="content"><h5>';
     var contentStringMiddle  = '</h5><a class="btn btn-primary" href="view_station.php?station=';
     var contentStringEnd     = '" role="button">Select this station</a></div>'
 
-    //initialize content string Gambia station
-    var contentStringGambia         = contentStringOpen+'BANJUL/YUNDUM'      +contentStringMiddle+'617010'+contentStringEnd;
-    //initialize content string Atlantic station
-    var contentStringAtlantic       = contentStringOpen+'SAL'                +contentStringMiddle+'85940' +contentStringEnd;
-    //initialize content string South Atlantic station 1
-    var contentStringSouthAtlantic1 = contentStringOpen+'WIDE AWAKE FIELD'   +contentStringMiddle+'619020'+contentStringEnd;
-    //initialize content string South Atlantic station 2
-    var contentStringSouthAtlantic2 = contentStringOpen+'GRYTVIKEN S.GEORGIA'+contentStringMiddle+'889030'+contentStringEnd;
-    //initialize content string South Atlantic station 3
-    var contentStringSouthAtlantic3 = contentStringOpen+'MOUNT PLEASANT AIRP'+contentStringMiddle+'888890'+contentStringEnd;
-    //initialize content string South Atlantic station 4
-    var contentStringSouthAtlantic4 = contentStringOpen+'STANLEY'            +contentStringMiddle+'888900'+contentStringEnd;
-    //initialize content string South Atlantic station 5
-    var contentStringSouthAtlantic5 = contentStringOpen+'STANLEY AIRPORT'    +contentStringMiddle+'888910'+contentStringEnd;
-    //initialize content string South Atlantic station 6
-    var contentStringSouthAtlantic6 = contentStringOpen+'GOUGH ISLAND'       +contentStringMiddle+'689060'+contentStringEnd;
+    //initialize and set contentString Gambia station
+    var contentStringGambia         = contentStringOpen + 'BANJUL/YUNDUM'+
+                                      contentStringMiddle + '617010' + contentStringEnd;
+    //initialize and set contentString Atlantic station
+    var contentStringAtlantic       = contentStringOpen + 'SAL' +
+                                      contentStringMiddle + '85940'  + contentStringEnd;
+    //initialize and set contentString South Atlantic station 1
+    var contentStringSouthAtlantic1 = contentStringOpen + 'WIDE AWAKE FIELD' +
+                                      contentStringMiddle + '619020' + contentStringEnd;
+    //initialize and set contentString South Atlantic station 2
+    var contentStringSouthAtlantic2 = contentStringOpen + 'GRYTVIKEN S.GEORGIA' +
+                                      contentStringMiddle + '889030' + contentStringEnd;
+    //initialize and set contentString South Atlantic station 3
+    var contentStringSouthAtlantic3 = contentStringOpen + 'MOUNT PLEASANT AIRP' +
+                                      contentStringMiddle + '888890' + contentStringEnd;
+    //initialize and set contentString South Atlantic station 4
+    var contentStringSouthAtlantic4 = contentStringOpen + 'STANLEY' +
+                                      contentStringMiddle + '888900' + contentStringEnd;
+    //initialize and set contentString South Atlantic station 5
+    var contentStringSouthAtlantic5 = contentStringOpen + 'STANLEY AIRPORT' +
+                                      contentStringMiddle + '888910' + contentStringEnd;
+    //initialize and set contentString South Atlantic station 6
+    var contentStringSouthAtlantic6 = contentStringOpen + 'GOUGH ISLAND' +
+                                      contentStringMiddle + '689060' + contentStringEnd;
 
     /* This function closes the current infoWindow and opens a new one
      *
