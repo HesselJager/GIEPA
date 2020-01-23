@@ -104,5 +104,34 @@
 	       }
 		}
 	}
+	/* This function reads wind direction
+	 * and converts it to a direction in words, like north east
+	 */
+	function wnddir_to_words($wnddir){
+		if($wnddir>=340 || $wnddir<=20){
+			return "NORTH";
+		}
+		elseif(in_array($wnddir,range(70,110))){
+			return "EAST";
+		}
+		elseif(in_array($wnddir,range(160,200))){
+			return "SOUTH";
+		}
+		elseif(in_array($wnddir,range(250,290))){
+			return "WEST";
+		}
+		elseif(in_array($wnddir,range(21,69))){
+			return "NORTH-EAST";
+		}
+		elseif(in_array($wnddir,range(111,159))){
+			return "SOUTH-EAST";
+		}
+		elseif(in_array($wnddir,range(201,249))){
+			return "SOUTH-WEST";
+		} 
+		else{
+			return "NORTH-WEST";
+		}
+	}
 
 ?>

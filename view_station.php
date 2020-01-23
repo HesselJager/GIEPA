@@ -100,7 +100,7 @@
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #DC292A; ">
     <!--GIEPA logo-->
     <a class="navbar-brand" href="#">
-      <img src="https://www.giepa.gm/sites/default/files/logo-giepa.png" width="180" height="60" alt="" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
+      <img src="https://www.giepa.gm/sites/default/files/logo-giepa.png" width="120" height="40" alt="" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
     </a>
     <!--Links to homepage, stations and logout-->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -226,6 +226,17 @@
           document.getElementById("current_wind_direction").innerHTML = this.responseText;
 	    }
 	  xmlhttp.open("GET", "ajax_wind_direction.php"+getParam, true);
+	  xmlhttp.send();
+	}
+	    //function to show temperature
+	function showTemp() {
+	    var xmlhttp = new XMLHttpRequest();
+	    xmlhttp.onreadystatechange = function() {
+	      if (this.readyState == 4 && this.status == 200) 
+          addData(window.myLine, '', this.responseText);
+	    
+	  }
+	  xmlhttp.open("GET", "ajax_temperature.php"+getParam, true);
 	  xmlhttp.send();
 	}
 	
