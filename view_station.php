@@ -133,7 +133,7 @@
   	?>
 
   	<div id="current_temperature"></div>
-  	<div id="current_wind_direction"></div>
+  	<div id="current_wind_direction">Current wind direction: </div>
   </div>
   <script>
   parser = new DOMParser();
@@ -220,13 +220,11 @@
 
 	//function to show wind direction
 	function showWnddir(){
-	  {
 	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
 	      if (this.readyState == 4 && this.status == 200) 
-          addData(window.myLine, '', this.responseText);
+          document.getElementById("current_wind_direction").innerHTML = this.responseText;
 	    }
-	  }
 	  xmlhttp.open("GET", "ajax_wind_direction.php"+getParam, true);
 	  xmlhttp.send();
 	}
@@ -262,6 +260,7 @@
 	window.setInterval(function() {
 	  showWdsp(); 
 	  removeData(window.myLine);
+	  showWnddir();
 	}, 1000);
 
 
