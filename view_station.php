@@ -107,6 +107,7 @@
       <div class="navbar-nav" style="font-size: 20px;">
         <a class="nav-item nav-link" href="home.php" style="color: #fff;">Home</a>
         <a class="nav-item nav-link" href="maps.php" style="color: #fff;">Stations</a>
+        <a class="nav-item nav-link" href="help.php" style="color: #fff;">Help</a>
         <a class="nav-item nav-link" href="logout.php" style="color: #fff;">Log out</a>
       </div>
     </div>
@@ -206,6 +207,37 @@
 	  xmlhttp.open("GET", "ajax_temperature.php"+getParam, true);
 	  xmlhttp.send();
 	}
+	
+	//function to show wind direction
+	function showWnddir(){
+	  {
+	    var xmlhttp = new XMLHttpRequest();
+	    xmlhttp.onreadystatechange = function() {
+	      if (this.readyState == 4 && this.status == 200) 
+          addData(window.myLine, '', this.responseText);
+	    }
+	  }
+	  xmlhttp.open("GET", "ajax_wind_direction.php"+getParam, true);
+	  xmlhttp.send();
+	}
+	
+    //function to show wind speed
+	function showW(){
+	  {
+	    var xmlhttp = new XMLHttpRequest();
+	    xmlhttp.onreadystatechange = function() {
+	      if (this.readyState == 4 && this.status == 200) 
+          addData(window.myLine, '', this.responseText);
+	    }
+	  }
+	  xmlhttp.open("GET", "ajax_wind_speed.php"+getParam, true);
+	  xmlhttp.send();
+	}
+	
+	
+	
+	
+	
 	//Interval for showtemp function
 	window.setInterval(function() {
 	  showTemp() 
