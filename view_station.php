@@ -252,7 +252,7 @@
 				xmlDoc.getElementsByTagName("MEASUREMENT");
 			
 			
-	    }
+	    
 	  }
 	  xmlhttp.open("GET", "ajax_table.php"+getParam, true);
 	  xmlhttp.send();
