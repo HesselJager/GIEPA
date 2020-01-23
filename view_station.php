@@ -130,6 +130,8 @@
   <div id="demo"></div>
   <!--Create linegraph-->
   <script>
+  parser = new DOMParser();
+
 	var getParam=window.location.search;
 	//set configuration variable
 	var config = {
@@ -239,8 +241,11 @@
 	function showTable(){
 	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
-	      if (this.readyState == 4 && this.status == 200) {
-			//fill the table
+	      if (this.readyState == 4 && this.status == 200) 
+				xmlDoc = parser.parseFromString(text,this.responseText);
+				xmlDoc.getElementsByTagName("MEASUREMENT");
+			
+			
 	    }
 	  }
 	  xmlhttp.open("GET", "ajax_table.php"+getParam, true);
