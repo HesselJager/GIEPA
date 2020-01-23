@@ -247,7 +247,7 @@
 	function showTable(){
 	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
-	      if (this.readyState == 4 && this.status == 200) 
+	      if (this.readyState == 4 && this.status == 200) {
 				xmlDoc = parser.parseFromString(text,this.responseText);
 				xmlDoc.getElementsByTagName("MEASUREMENT");
 			
