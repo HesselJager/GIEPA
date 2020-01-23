@@ -95,6 +95,7 @@
       <div class="navbar-nav" style="font-size: 20px;">
         <a class="nav-item nav-link" href="home.php" style="color: #fff;">Home</a>
         <a class="nav-item nav-link" href="maps.php" style="color: #fff;">Stations</a>
+        <a class="nav-item nav-link" href="help.php" style="color: #fff;">Help</a>
         <a class="nav-item nav-link" href="logout.php" style="color: #fff;">Log out</a>
       </div>
     </div>
@@ -103,10 +104,18 @@
   <div id="map"></div>
   <!--Script to get the map on the webpage-->
   <script>
-    var map, infoWindowGeolocation;
+    //initialize variable map
+    var map;
+    //initialize marker variables
+    var markerGeolocation, markerGambia, markerAtlantic, markerSouthAtlantic1,
+      markerSouthAtlantic2, markerSouthAtlantic3, markerSouthAtlantic5, markerSouthAtlantic6;
+    //initialize infoWindow variables
+    var infoWindowGeolocation, infowindowGambia, infowindowAtlantic, infowindowSouthAtlantic1,
+      infowindowSouthAtlantic2, infowindowSouthAtlantic3, infowindowSouthAtlantic4,
+      infowindowSouthAtlantic5, infowindowSouthAtlantic6;
     //this function initiates the map
     function initMap() {
-      //set the waypoints for the weather stations
+      //initialize coordinate variables for the weather stations
       var gambia                  = {lat: 13.2,     lng: -16.633};  // 617010
       var atlantic                = {lat: 16.733,   lng: -22.95};   // 85940
       var south_atlantic_ocean_1  = {lat: -7.967,   lng: -14.4};    // 619020
@@ -120,7 +129,6 @@
         zoom: 4,
         center: gambia 
       });
-
       // Geo-locate current position
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -144,6 +152,14 @@
           // Add event for mouseclick 
           markerGeolocation.addListener('click', function() {
             infoWindowGeolocation.open(map);
+            infowindowGambia.close(map);
+            infowindowAtlantic.close(map);
+            infowindowSouthAtlantic1.close(map);
+            infowindowSouthAtlantic2.close(map);
+            infowindowSouthAtlantic3.close(map);
+            infowindowSouthAtlantic4.close(map);
+            infowindowSouthAtlantic5.close(map);
+            infowindowSouthAtlantic6.close(map);
           })
           // Error handling
         }, function() {
@@ -161,12 +177,13 @@
           '<a class="btn btn-primary" href="view_station.php?station=617010" role="button">Select this station</a>' +
           '</div>';
       // Create infoWindow for station
-      var infowindowGambia = new google.maps.InfoWindow( {
+      infowindowGambia = new google.maps.InfoWindow( {
         content: contentStringGambia});
       // Create marker for station
-      var markerGambia = new google.maps.Marker( {
+      markerGambia = new google.maps.Marker( {
         position: gambia,
         map: map,
+        url: 'view_station.php?station=617010',
         title: 'Gambia Weather Station'});
       /* Add click event for station marker, opening
        * the infoWindow and closing all other open infoWindows
@@ -180,8 +197,11 @@
         infowindowSouthAtlantic4.close(map);
         infowindowSouthAtlantic5.close(map);
         infowindowSouthAtlantic6.close(map);
+        infoWindowGeolocation.close(map);
       });
-
+      markerGambia.addListener('dblclick', function() {
+        window.location.href = this.url;
+      });
       /* Weather Station Atlantic Ocean */
       // Create content string for station
       var contentStringAtlantic = '<div id="content">'+
@@ -189,12 +209,13 @@
           '<a class="btn btn-primary" href="view_station.php?station=85940" role="button">Select this station</a>' +
           '</div>';
       // Create infoWindow for station
-      var infowindowAtlantic = new google.maps.InfoWindow( {
+      infowindowAtlantic = new google.maps.InfoWindow( {
         content: contentStringAtlantic});
       // Create marker for station
-      var markerAtlantic = new google.maps.Marker( {
+      markerAtlantic = new google.maps.Marker( {
         position: atlantic,
         map: map,
+        url: 'view_station.php?station=85940',
         title: 'Atlantic Weather Station'});
       /* Add click event for station marker, opening
        * the infoWindow and closing all other open infoWindows
@@ -208,8 +229,11 @@
         infowindowSouthAtlantic4.close(map);
         infowindowSouthAtlantic5.close(map);
         infowindowSouthAtlantic6.close(map);
+        infoWindowGeolocation.close(map);
       });
-
+      markerAtlantic.addListener('dblclick', function() {
+        window.location.href = this.url;
+      });
       /* Weather Station south atlantic ocean 1 */
       // Create content string for station
       var contentStringSouthAtlantic1 = '<div id="content">'+
@@ -217,12 +241,13 @@
           '<a class="btn btn-primary" href="view_station.php?station=619020" role="button">Select this station</a>' +
           '</div>';
       // Create infoWindow for station
-      var infowindowSouthAtlantic1 = new google.maps.InfoWindow({
+      infowindowSouthAtlantic1 = new google.maps.InfoWindow({
         content: contentStringSouthAtlantic1});
       // Create marker for station
-      var markerSouthAtlantic1 = new google.maps.Marker( {
+      markerSouthAtlantic1 = new google.maps.Marker( {
         position: south_atlantic_ocean_1,
         map: map,
+        url: 'view_station.php?station=619020',
         title: 'South Atlantic Weather Station 1'});
       /* Add click event for station marker, opening
        * the infoWindow and closing all other open infoWindows
@@ -236,8 +261,11 @@
         infowindowSouthAtlantic4.close(map);
         infowindowSouthAtlantic5.close(map);
         infowindowSouthAtlantic6.close(map);
+        infoWindowGeolocation.close(map);
       });
-
+      markerSouthAtlantic1.addListener('dblclick', function() {
+        window.location.href = this.url;
+      });
       /* Weather Station south atlantic ocean 2 */
       // Create content string for station
       var contentStringSouthAtlantic2 = '<div id="content">'+
@@ -245,12 +273,13 @@
           '<a class="btn btn-primary" href="view_station.php?station=889030" role="button">Select this station</a>' +
           '</div>';
       // Create infoWindow for station
-      var infowindowSouthAtlantic2 = new google.maps.InfoWindow( {
+      infowindowSouthAtlantic2 = new google.maps.InfoWindow( {
         content: contentStringSouthAtlantic2});
       // Create marker for station
-      var markerSouthAtlantic2 = new google.maps.Marker( {
+      markerSouthAtlantic2 = new google.maps.Marker( {
         position: south_atlantic_ocean_2,
         map: map,
+        url: 'view_station.php?station=889030',
         title: 'South Atlantic Weather Station 2'});
       /* Add click event for station marker, opening
        * the infoWindow and closing all other open infoWindows
@@ -264,8 +293,11 @@
         infowindowSouthAtlantic4.close(map);
         infowindowSouthAtlantic5.close(map);
         infowindowSouthAtlantic6.close(map);
+        infoWindowGeolocation.close(map);
       });
-
+      markerSouthAtlantic2.addListener('dblclick', function() {
+        window.location.href = this.url;
+      });
       /* Weather Station south atlantic ocean 3 */
       // Create content string for station
       var contentStringSouthAtlantic3 = '<div id="content">'+
@@ -273,12 +305,13 @@
           '<a class="btn btn-primary" href="view_station.php?station=888890" role="button">Select this station</a>' +
           '</div>';
       // Create infoWindow for station
-      var infowindowSouthAtlantic3 = new google.maps.InfoWindow( {
+      infowindowSouthAtlantic3 = new google.maps.InfoWindow( {
         content: contentStringSouthAtlantic3});
       // Create marker for station
-      var markerSouthAtlantic3 = new google.maps.Marker( {
+      markerSouthAtlantic3 = new google.maps.Marker( {
         position: south_atlantic_ocean_3,
         map: map,
+        url: 'view_station.php?station=888890',
         title: 'South Atlantic Weather Station 3'});
       /* Add click event for station marker, opening
        * the infoWindow and closing all other open infoWindows
@@ -292,8 +325,11 @@
         infowindowSouthAtlantic4.close(map);
         infowindowSouthAtlantic5.close(map);
         infowindowSouthAtlantic6.close(map);
+        infoWindowGeolocation.close(map);
       });
-
+      markerSouthAtlantic3.addListener('dblclick', function() {
+        window.location.href = this.url;
+      });
       /* Weather Station south atlantic ocean 4 */
       // Create content string for station
       var contentStringSouthAtlantic4 = '<div id="content">'+
@@ -301,12 +337,13 @@
           '<a class="btn btn-primary" href="view_station.php?station=888900" role="button">Select this station</a>' +
           '</div>';
       // Create infoWindow for station
-      var infowindowSouthAtlantic4 = new google.maps.InfoWindow( {
+      infowindowSouthAtlantic4 = new google.maps.InfoWindow( {
         content: contentStringSouthAtlantic4});
       // Create marker for station
-      var markerSouthAtlantic4 = new google.maps.Marker( {
+      markerSouthAtlantic4 = new google.maps.Marker( {
         position: south_atlantic_ocean_4,
         map: map,
+        url: 'view_station.php?station=888900',
         title: 'South Atlantic Weather Station 4'});
       /* Add click event for station marker, opening
        * the infoWindow and closing all other open infoWindows
@@ -320,8 +357,11 @@
         infowindowSouthAtlantic4.open(map, markerSouthAtlantic4);
         infowindowSouthAtlantic5.close(map);
         infowindowSouthAtlantic6.close(map);
+        infoWindowGeolocation.close(map);
       });
-
+      markerSouthAtlantic4.addListener('dblclick', function() {
+        window.location.href = this.url;
+      });
       /* Weather Station south atlantic ocean 5 */
       // Create content string for station
       var contentStringSouthAtlantic5 = '<div id="content">'+
@@ -329,12 +369,13 @@
           '<a class="btn btn-primary" href="view_station.php?station=888910" role="button">Select this station</a>' +
           '</div>';
       // Create infoWindow for station
-      var infowindowSouthAtlantic5 = new google.maps.InfoWindow( {
+      infowindowSouthAtlantic5 = new google.maps.InfoWindow( {
         content: contentStringSouthAtlantic5});
       // Create marker for station
-      var markerSouthAtlantic5 = new google.maps.Marker( {
+      markerSouthAtlantic5 = new google.maps.Marker( {
         position: south_atlantic_ocean_5,
         map: map,
+        url: 'view_station.php?station=888910',
         title: 'South Atlantic Weather Station 5'});
       /* Add click event for station marker, opening
        * the infoWindow and closing all other open infoWindows
@@ -348,8 +389,11 @@
         infowindowSouthAtlantic4.close(map);
         infowindowSouthAtlantic5.open(map, markerSouthAtlantic5);
         infowindowSouthAtlantic6.close(map);
+        infoWindowGeolocation.close(map);
       });
-
+      markerSouthAtlantic5.addListener('dblclick', function() {
+        window.location.href = this.url;
+      });
       /* Weather Station south atlantic ocean 6 */
       // Create content string for station
       var contentStringSouthAtlantic6 = '<div id="content">'+
@@ -357,12 +401,13 @@
         '<a class="btn btn-primary" href="view_station.php?station=689060" role="button">Select this station</a>' +
         '</div>';
       // Create infoWindow for station
-      var infowindowSouthAtlantic6 = new google.maps.InfoWindow( {
+      infowindowSouthAtlantic6 = new google.maps.InfoWindow( {
         content: contentStringSouthAtlantic6});
       // Create marker for station
-      var markerSouthAtlantic6 = new google.maps.Marker({
+      markerSouthAtlantic6 = new google.maps.Marker({
         position: south_atlantic_ocean_6,
         map: map,
+        url: 'view_station.php?station=689060',
         title: 'South Atlantic Weather Station 6'});
       /* Add click event for station marker, opening
        * the infoWindow and closing all other open infoWindows
@@ -376,6 +421,10 @@
         infowindowSouthAtlantic4.close(map);
         infowindowSouthAtlantic5.close(map);
         infowindowSouthAtlantic6.open(map, markerSouthAtlantic6);
+        infoWindowGeolocation.close(map);
+      });
+      markerSouthAtlantic6.addListener('dblclick', function() {
+        window.location.href = this.url;
       });
     }
 

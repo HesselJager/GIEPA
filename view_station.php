@@ -107,6 +107,7 @@
       <div class="navbar-nav" style="font-size: 20px;">
         <a class="nav-item nav-link" href="home.php" style="color: #fff;">Home</a>
         <a class="nav-item nav-link" href="maps.php" style="color: #fff;">Stations</a>
+        <a class="nav-item nav-link" href="help.php" style="color: #fff;">Help</a>
         <a class="nav-item nav-link" href="logout.php" style="color: #fff;">Log out</a>
       </div>
     </div>
