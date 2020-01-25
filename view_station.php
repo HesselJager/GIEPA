@@ -76,22 +76,33 @@
       margin-bottom:0px;
       border: 0px;
     }
-    /*set style for buttons*/
-    button {
-      background-color: #f5f5f5;
-      margin-bottom: 10px;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-      box-shadow: 0 10px 16px 0 rgba(0,0,0,0.24);
-      height: 100%;
-      width:100%;
-    }
     /*set style for media*/
     @media (min-width: 768px) {
       .bd-placeholder-img-lg {
         font-size: 3.5rem;
       }
+	  
     }
+	table{
+    width: 40%;
+	border: 1%;
+	border-collapse:collapse;
+	text-align: center;
+	}
+	th{
+    border:1px solid black;
+	}
+	tr{
+    border:1px solid black;
+	}
+	td{
+    min-width: 10%;
+    border:1px solid black;
+	}
+	div.wtable{
+	padding-left: 1%;
+	}
+
   </style>
 </head>
 <!--Webpage body-->
@@ -127,6 +138,16 @@
 	  }
     ?>
   </div>
+  <script>
+  //Interval for showtemp function
+	window.setInterval(function() {
+	  showTable();
+	  showtempTable();
+	  showWdsp(); 
+	  removeData(window.myLine);
+	  showWnddir();
+	}, 1000);
+  </script>
   <div id="content">
   	<?php 
   		echo "<h2 style='text-align: center;'>" . get_station_name($station_id) . "</h2>";
@@ -134,6 +155,11 @@
 
   	<div id="current_temperature"></div>
   	<div id="current_wind_direction">Current wind direction: </div>
+	<div class="wtable">
+	<div id="data_table" class="wtable"></div>
+	<button onclick='exporttoxml("#wind_table")'>Download Table</button>
+	<div id="date_temp_table" class="wtable"></div>
+	<button onclick='exporttoxml("#temp_table")'>Download Table</button>
   </div>
   <script>
   parser = new DOMParser();
@@ -228,7 +254,7 @@
 	  xmlhttp.open("GET", "ajax_wind_direction.php"+getParam, true);
 	  xmlhttp.send();
 	}
-	    //function to show temperature
+		    //function to show temperature
 	function showTemp() {
 	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
@@ -239,7 +265,6 @@
 	  xmlhttp.open("GET", "ajax_temperature.php"+getParam, true);
 	  xmlhttp.send();
 	}
-	
     //function to show wind speed
 	function showWdsp() {
 	    var xmlhttp = new XMLHttpRequest();
@@ -256,27 +281,38 @@
 	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
 	      if (this.readyState == 4 && this.status == 200) {
-				xmlDoc = parser.parseFromString(text,this.responseText);
-				xmlDoc.getElementsByTagName("MEASUREMENT");
-			
+			document.getElementById("data_table").innerHTML = this.responseText;
 	    }
 	  }
 	  xmlhttp.open("GET", "ajax_table.php"+getParam, true);
 	  xmlhttp.send();
 	}
-	
-	//Interval for showtemp function
-	window.setInterval(function() {
-	  showWdsp(); 
-	  removeData(window.myLine);
-	  showWnddir();
-	}, 1000);
-
-
+	function showtempTable(){
+	    var xmlhttp = new XMLHttpRequest();
+	    xmlhttp.onreadystatechange = function() {
+	      if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("date_temp_table").innerHTML = this.responseText;
+	    }
+	  }
+	  xmlhttp.open("GET", "ajax_table_temp.php"+getParam, true);
+	  xmlhttp.send();
+	}
   </script>
+  <script src="jquery.min.1.11.1.js" type="text/javascript"></script>  
+	<script src="jquery.tabletoxml.js" type="text/javascript"></script>  
+  <script type="text/javascript">  
+        function exporttoxml(table) {  
+            $(table).tabletoxml({  
+                rootnode: "Station",  
+                childnode: "Measurement",  
+                filename: table.substr(1)				
+            });  
+        }  
+	</script>
+	
   <!--<footer></footer>-->
   <!--Closing scripts for bootstrap-->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+  <script sourcey="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
     crossorigin="anonymous">
   </script>
