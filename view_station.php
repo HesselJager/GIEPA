@@ -141,6 +141,7 @@
   <script>
   //Interval for showtemp function
 	window.setInterval(function() {
+	  ReadXML();
 	  showTable();
 	  showtempTable();
 	  showWdsp(); 
@@ -297,6 +298,20 @@
 	  xmlhttp.open("GET", "ajax_table_temp.php"+getParam, true);
 	  xmlhttp.send();
 	}
+	
+	//This function reads the needed xml files once
+	function ReadXML(){
+	    var xmlhttp = new XMLHttpRequest();
+	    xmlhttp.onreadystatechange = function() {
+	      if (this.readyState == 4 && this.status == 200) {
+
+	    }
+	  }
+	  xmlhttp.open("GET", "ajax_parse_dir.php", true);
+	  xmlhttp.send();
+	}	
+	
+	
   </script>
   <script src="jquery.min.1.11.1.js" type="text/javascript"></script>  
 	<script src="jquery.tabletoxml.js" type="text/javascript"></script>  
