@@ -304,10 +304,10 @@
 	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
 	      if (this.readyState == 4 && this.status == 200) {
-
+		
 	    }
 	  }
-	  xmlhttp.open("GET", "ajax_parse_dir.php", true);
+	  xmlhttp.open("GET", "ajax_parse_dir.php"+getParam, true);
 	  xmlhttp.send();
 	}	
 	

@@ -74,7 +74,7 @@
 	 * If the stationnumber belongs to a station that is needed an object will be created 
 	 * The object will be put in the measurements array
 	 */
-	function parse_xml($xml_file,$name){
+	function parse_xml($xml_file){
 		global $measurements;
 		$file_str=file_get_contents($xml_file);
 		$file_str=str_replace("<?xml version=\"1.0\" encoding=\"UTF-8\"?>","",$file_str);
@@ -85,32 +85,18 @@
 		$xml = simplexml_load_string($file_str);	
 		foreach($xml->children() as $child){
 	        $measurement =new Measurement();
-            $measurement->stn=intval($name);
+            $measurement->stn=intval($child->STN);
+			
  		 	$measurement->date_and_time=date_create($child->DATE." ".$child->TIME);
 	        $measurement->temp=floatval($child->TEMP);
 	        $measurement->wdsp=floatval($child->WDSP);
 	        $measurement->wnddir=floatval($child->WNDDIR);
 	        $measurements[$measurement->stn]=array_merge($measurements[$measurement->stn],array($measurement));  
+			
+			
 		}
 	}
-	/* This function reads an directory of xml_files
-	 * and uses the parse_xml function al these files
-	 */
-	function parse_xml_dir($dir){
-		$dir=$dir."/";
-		
-		if (is_dir($dir)){
-			 if ($dh = opendir($dir)){
-	    while (($file = readdir($dh)) !== false){
-			$stationnum=substr($file,0,-4);
-			if(check_station(intval($stationnum ))){
-			parse_xml($dir.$file,$stationnum);
-			}
-	    }
-	    closedir($dh);
-	       }
-		}
-	}
+
 	/* This function reads wind direction
 	 * and converts it to a direction in words, like north east
 	 */
