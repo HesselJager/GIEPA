@@ -84,23 +84,33 @@
 	  
     }
 	table{
-    width: 40%;
-	border: 1%;
+    width: 30%;
+	border-spacing: 0;
 	border-collapse:collapse;
 	text-align: center;
 	}
+	
+	tbody, thead tr { display: block; }
+	
+	tbody {
+    height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+	}
+
 	th{
-    border:1px solid black;
+    border:0px solid black;
+	width: 10%;
 	}
 	tr{
     border:1px solid black;
 	}
 	td{
-    min-width: 10%;
+    width: 10%;
     border:1px solid black;
 	}
-	div.wtable{
-	padding-left: 1%;
+	div{
+	padding-left: 0.5%;
 	}
 
   </style>
@@ -139,15 +149,31 @@
     ?>
   </div>
   <script>
+  var pause_status = false;
   //Interval for showtemp function
-	window.setInterval(function() {
-	  ReadXML();
-	  showTable();
-	  showtempTable();
-	  showWdsp(); 
-	  removeData(window.myLine);
-	  showWnddir();
-	}, 1000);
+  window.setInterval(checkTable, 1000);
+  function checkTable(){
+	  if(pause_status == false){
+		ReadXML();
+		showTable();
+		showtempTable();
+		showWdsp(); 
+		removeData(window.myLine);
+		showWnddir();
+	  }
+	  else{
+		ReadXML();
+		showWdsp(); 
+		removeData(window.myLine);
+		showWnddir();
+	  }
+  }
+  function pauseTable(){
+	  pause_status = true;
+  }
+  function continueTable(){
+	  pause_status = false;
+  }
   </script>
   <div id="content">
   	<?php 
@@ -157,10 +183,14 @@
   	<div id="current_temperature"></div>
   	<div id="current_wind_direction">Current wind direction: </div>
 	<div class="wtable">
-	<div id="data_table" class="wtable"></div>
-	<button onclick='exporttoxml("#wind_table")'>Download Table</button>
-	<div id="date_temp_table" class="wtable"></div>
-	<button onclick='exporttoxml("#temp_table")'>Download Table</button>
+	<h3>Wind measurements</h3>
+	<a id="data_table" class="wtable"></a>
+	<p style="width: 30%;"><button onclick='exporttoxml("#wind_table")' style="width: 50%;">Download Table</button><button onclick='continueTable()' style="width: 50%;">Refresh Table</button></p>
+	<br>
+	<br>
+	<h3>Temperature measurements</h3>
+	<a id="date_temp_table" class="wtable"></a>
+	<p style="width: 30%;"><button onclick='exporttoxml("#temp_table")' style="width: 50%;">Download Table</button><button onclick='continueTable()' style="width: 50%;">Refresh Table</button></p>
   </div>
   <script>
   parser = new DOMParser();
@@ -318,9 +348,9 @@
   <script type="text/javascript">  
         function exporttoxml(table) {  
             $(table).tabletoxml({  
-                rootnode: "Station",  
+                rootnode: "Data",  
                 childnode: "Measurement",  
-                filename: table.substr(1)				
+                filename: "<?php echo get_station_name($station_id); ?>" + table.substr(1)				
             });  
         }  
 	</script>
