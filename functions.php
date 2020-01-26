@@ -59,7 +59,7 @@
 	 * The key is the stationnumber, the value is an array of the measurement objects belonging to the 
 	 * station, holding this stationnumber.
 	 */
-	$measurements=array_fill_keys($allowed_stations,array());
+	$measurements=array();
 	/* This class creates a measurement object,
 	 * which holds data of a measuremnt in a weatherstation
 	 */
@@ -91,7 +91,7 @@
 	        $measurement->temp=floatval($child->TEMP);
 	        $measurement->wdsp=floatval($child->WDSP);
 	        $measurement->wnddir=floatval($child->WNDDIR);
-	        $measurements[$measurement->stn]=array_merge($measurements[$measurement->stn],array($measurement));  
+	        $measurements=array_merge($measurements,array($measurement));  
 			
 			
 		}

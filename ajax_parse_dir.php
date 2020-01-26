@@ -1,7 +1,9 @@
 <?php
 	session_start();
 	include 'functions.php';
-	parse_xml("weatherdata/$_GET['station'].xml"); 
+	$station_id=$_GET['station'];
+	parse_xml("weatherdata/$station_id.xml"); 
 	$_SESSION["measurements"]=$measurements;
+	
 	
 ?>
