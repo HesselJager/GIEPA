@@ -1,57 +1,2394 @@
-<?xml version="1.0"?>
-<!-- Het weatherdata-element bevat meerdere measurement-elementen -->
+<?xml version="1.0" encoding="UTF-8"?>
 <WEATHERDATA>
-	<!-- Het measurement-element bevat de meetgegevens van een weerstation -->
-	<MEASUREMENT>
-		<!-- Het station waarvan deze gegevens zijn -->
-		<STN>617010</STN>
-		
-		<!-- Datum van versturen van deze gegevens, formaat: yyyy-mm-dd -->
-		<DATE>2009-09-13</DATE>
-		
-		<!-- Tijd van versturen van deze gegevens, formaat: hh:mm:ss -->
-		<TIME>15:59:46</TIME>
-		
-		<!-- Temperatuur in graden Celsius, geldige waardes van -9999.9 t/m 9999.9 met 1 decimaal -->
-		<TEMP>40</TEMP>
-		
-		<!-- Dauwpunt in graden Celsius, geldige waardes van -9999.9 t/m 9999.9 met 1 decimaal -->
-		<DEWP>-58.1</DEWP>
-		
-		<!-- Luchtdruk op stationsniveau in millibar, geldige waardes van 0.0 t/m 9999.9 met 1 decimaal -->
-		<STP>1034.5</STP>
-		
-		<!-- Luchtdruk op zeeniveau in millibar, geldige waardes van 0.0 t/m 9999.9 met 1 decimaal -->
-		<SLP>1007.6</SLP>
-		
-		<!-- Zichtbaarheid in kilometers, geldige waardes van 0.0 t/m 999.9 met 1 decimaal -->
-		<VISIB>123.7</VISIB>
-		
-		<!-- Windsnelheid in kilometers per uur, geldige waardes van 0.0 t/m 999.9 met 1 decimaal -->
-		<WDSP>10.8</WDSP>
-		
-		<!-- Neerslag in centimeters, geldige waardes van 0.00 t/m 999.99 met 2 decimalen -->
-		<PRCP>11.28</PRCP>
-		
-		<!-- Gevallen sneeuw in centimeters, geldige waardes van -9999.9 t/m 9999.9 met 1 decimaal -->
-		<SNDP>11.1</SNDP>
-		
-		<!--
-		Gebeurtenissen op deze dag, cummulatief, binair uitgedrukt.
-		Opeenvolgend, van meest- naar minst significant:
-		Vriezen, geeft aan of het gevroren heeft
-		Regen, geeft aan of het geregend heeft.
-		Sneeuw, geeft aan of het gesneeuwd heeft.
-		Hagel, geeft aan of het gehageld heeft.
-		Onweer, geeft aan of er onweer is geweest.
-		Tornado/windhoos, geeft aan of er een tornado of windhoos geweest is.
-		-->
-		<FRSHTT>010101</FRSHTT>
-		
-		<!-- Bewolking in procenten, geldige waardes van 0.0 t/m 99.9 met 1 decimaal -->
-		<CLDC>87.4</CLDC>
-		
-		<!-- Windrichting in graden, geldige waardes van 0 t/m 359 alleen gehele getallen -->
-		<WNDDIR>342</WNDDIR>
-	</MEASUREMENT>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:06</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>979.6</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>17.5</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.2</CLDC>
+    <WNDDIR>126</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:07</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>979.5</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>17.4</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>126</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:08</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>979.4</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>17.5</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>126</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:09</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>979.3</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>17.4</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>126</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:10</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>979.4</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>17.2</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>125</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:11</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>979.5</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>17.4</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>125</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:12</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>979.6</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>17.5</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>125</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:13</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>979.5</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>17.4</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>124</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:14</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>979.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>17.5</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.0</CLDC>
+    <WNDDIR>124</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:15</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>979.3</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>17.7</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.0</CLDC>
+    <WNDDIR>124</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:16</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>979.3</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>17.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.0</CLDC>
+    <WNDDIR>124</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:17</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>979.2</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>17.7</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.0</CLDC>
+    <WNDDIR>124</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:18</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>979.1</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.1</VISIB>
+    <WDSP>17.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.0</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:19</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>979.2</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.1</VISIB>
+    <WDSP>18.0</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>124</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:20</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>979.1</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.0</VISIB>
+    <WDSP>18.1</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:21</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>979.0</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.1</VISIB>
+    <WDSP>18.0</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:22</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>979.1</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.1</VISIB>
+    <WDSP>17.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:23</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>979.0</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>17.7</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:24</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>979.1</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>17.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.2</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:25</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>979.0</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>17.7</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.2</CLDC>
+    <WNDDIR>124</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:26</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.9</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>17.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.2</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:27</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.8</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>17.7</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.2</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:28</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.9</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.1</VISIB>
+    <WDSP>17.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.2</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:29</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.8</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>17.7</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>124</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:30</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.7</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>17.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.2</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:31</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.8</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>17.7</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>124</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:32</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.7</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.1</VISIB>
+    <WDSP>17.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:33</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.7</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.1</VISIB>
+    <WDSP>18.0</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>124</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:34</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.6</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.0</VISIB>
+    <WDSP>17.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>124</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:35</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.7</STP>
+    <SLP>957.9</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>17.7</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>124</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:36</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.6</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.0</VISIB>
+    <WDSP>17.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>124</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:37</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.5</STP>
+    <SLP>957.9</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>18.0</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>124</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:38</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.6</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.0</VISIB>
+    <WDSP>17.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:39</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.5</STP>
+    <SLP>957.9</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>17.7</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:40</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.4</STP>
+    <SLP>957.9</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>17.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:41</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.3</STP>
+    <SLP>957.9</SLP>
+    <VISIB>8.8</VISIB>
+    <WDSP>18.0</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:42</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.4</STP>
+    <SLP>957.9</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>18.1</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:43</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.3</STP>
+    <SLP>957.9</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>18.0</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:44</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.2</STP>
+    <SLP>957.9</SLP>
+    <VISIB>9.0</VISIB>
+    <WDSP>18.1</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:45</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.3</STP>
+    <SLP>957.9</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>18.0</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:46</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.0</VISIB>
+    <WDSP>18.1</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:47</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.3</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>18.3</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>122</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:48</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.2</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>18.4</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:49</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.3</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>18.6</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:50</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.0</VISIB>
+    <WDSP>18.7</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:51</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.3</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.1</VISIB>
+    <WDSP>18.9</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:52</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.1</VISIB>
+    <WDSP>19.0</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>123</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:53</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.1</VISIB>
+    <WDSP>18.9</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>122</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:54</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.6</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.1</VISIB>
+    <WDSP>18.7</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>122</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:55</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>18.9</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>122</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:56</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.6</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>19.0</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>122</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:57</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>19.2</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>122</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:58</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.6</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>19.3</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>122</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:19:59</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.7</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>19.2</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>122</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:00</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.6</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>19.3</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:01</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>19.5</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:02</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>19.6</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:03</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>19.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:04</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>19.6</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:05</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.3</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>19.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>120</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:06</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>19.9</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.6</CLDC>
+    <WNDDIR>120</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:07</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.3</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>19.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>120</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:08</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>19.6</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.6</CLDC>
+    <WNDDIR>120</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:09</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>19.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>120</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:10</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>19.6</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:11</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>19.5</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:12</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>19.6</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:13</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>19.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>118</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:14</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>19.9</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:15</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>19.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.5</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:16</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.6</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>19.6</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:17</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>19.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>120</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:18</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.6</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>19.6</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>120</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:19</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.3</VISIB>
+    <WDSP>19.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>120</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:20</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>19.9</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>120</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:21</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>19.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>120</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:22</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.6</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>19.6</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:23</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.2</VISIB>
+    <WDSP>19.5</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:24</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.1</VISIB>
+    <WDSP>19.3</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.4</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:25</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.1</VISIB>
+    <WDSP>19.2</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:26</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.0</VISIB>
+    <WDSP>19.0</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:27</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.3</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>18.9</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:28</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.0</VISIB>
+    <WDSP>19.0</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:29</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.3</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>18.9</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>122</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:30</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.0</VISIB>
+    <WDSP>19.0</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:31</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.3</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>19.2</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>122</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:32</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>19.0</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:33</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>18.9</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:34</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.6</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.0</VISIB>
+    <WDSP>18.7</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.2</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:35</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.7</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>18.9</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:36</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.6</STP>
+    <SLP>958.0</SLP>
+    <VISIB>9.0</VISIB>
+    <WDSP>18.7</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:37</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>18.6</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:38</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.6</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>18.7</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:39</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.7</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.8</VISIB>
+    <WDSP>18.6</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:40</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.7</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.8</VISIB>
+    <WDSP>18.4</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:41</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.8</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.7</VISIB>
+    <WDSP>18.3</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.3</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:42</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.7</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.7</VISIB>
+    <WDSP>18.1</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.2</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:43</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.7</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.7</VISIB>
+    <WDSP>18.0</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.2</CLDC>
+    <WNDDIR>122</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:44</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.6</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.8</VISIB>
+    <WDSP>18.1</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.2</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:45</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.8</VISIB>
+    <WDSP>18.3</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>122</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:46</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.8</VISIB>
+    <WDSP>18.1</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:47</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.3</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.8</VISIB>
+    <WDSP>18.0</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:48</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>17.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.2</CLDC>
+    <WNDDIR>121</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:49</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.8</VISIB>
+    <WDSP>18.0</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>120</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:50</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.8</VISIB>
+    <WDSP>17.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.2</CLDC>
+    <WNDDIR>120</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:51</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.7</VISIB>
+    <WDSP>17.7</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>120</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:52</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.6</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.8</VISIB>
+    <WDSP>17.5</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.2</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:53</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.8</VISIB>
+    <WDSP>17.7</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP />
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.2</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:54</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>17.5</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.2</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:55</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.5</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.8</VISIB>
+    <WDSP>17.4</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:56</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.4</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>17.2</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:57</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.3</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.8</VISIB>
+    <WDSP>17.1</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.1</CLDC>
+    <WNDDIR>118</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:58</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.2</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.9</VISIB>
+    <WDSP>17.2</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.0</CLDC>
+    <WNDDIR>118</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:20:59</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.3</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.8</VISIB>
+    <WDSP>17.1</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.0</CLDC>
+    <WNDDIR>118</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:21:00</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.2</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.8</VISIB>
+    <WDSP>17.2</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.0</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:21:01</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.3</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.8</VISIB>
+    <WDSP>17.1</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.0</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:21:02</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.2</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.8</VISIB>
+    <WDSP>16.9</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.0</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:21:03</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.5</DEWP>
+    <STP>978.3</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.7</VISIB>
+    <WDSP>16.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.0</CLDC>
+    <WNDDIR>120</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:21:04</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.2</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.7</VISIB>
+    <WDSP>16.9</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.0</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:21:05</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.1</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.7</VISIB>
+    <WDSP>17.1</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>64.9</CLDC>
+    <WNDDIR>120</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:21:06</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.2</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.7</VISIB>
+    <WDSP>16.9</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>64.9</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:21:07</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.3</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.6</VISIB>
+    <WDSP>16.8</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>64.9</CLDC>
+    <WNDDIR>120</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:21:08</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.2</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.6</VISIB>
+    <WDSP>16.6</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>64.9</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:21:09</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.1</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.6</VISIB>
+    <WDSP>16.5</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>64.9</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:21:10</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.2</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.6</VISIB>
+    <WDSP>16.6</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>65.0</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <STN>617010</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:21:11</TIME>
+    <TEMP>-0.4</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.3</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.6</VISIB>
+    <WDSP>16.5</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>64.9</CLDC>
+    <WNDDIR>120</WNDDIR>
+  </MEASUREMENT>
 </WEATHERDATA>

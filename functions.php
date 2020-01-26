@@ -76,7 +76,13 @@
 	 */
 	function parse_xml($xml_file){
 		global $measurements;
-		$xml = simplexml_load_file($xml_file);	
+		$file_str=file_get_contents($xml_file);
+		$file_str=str_replace("<?xml version=\"1.0\" encoding=\"UTF-8\"?>","",$file_str);
+		$file_str=str_replace("</WEATHERDATA>","",$file_str);
+		$file_str=str_replace("<WEATHERDATA>","",$file_str);
+		$file_str="<?xml version=\"1.0\" encoding=\"UTF-8\"?><WEATHERDATA>".$file_str."</WEATHERDATA>";
+		
+		$xml = simplexml_load_string($file_str);	
 		foreach($xml->children() as $child){
 	        $measurement =new Measurement();
             $measurement->stn=intval($child->STN);

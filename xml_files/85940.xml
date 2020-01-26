@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Het weatherdata-element bevat meerdere measurement-elementen -->
 <WEATHERDATA>
 	<!-- Het measurement-element bevat de meetgegevens van een weerstation -->
@@ -54,4 +54,23 @@
 		<!-- Windrichting in graden, geldige waardes van 0 t/m 359 alleen gehele getallen -->
 		<WNDDIR>342</WNDDIR>
 	</MEASUREMENT>
+</WEATHERDATA>
+<WEATHERDATA>
+<?xml version="1.0" encoding="UTF-8"?>
+  <MEASUREMENT>
+    <STN>85940</STN>
+    <DATE>2020-01-25</DATE>
+    <TIME>19:21:09</TIME>
+    <TEMP>0.0</TEMP>
+    <DEWP>-3.1</DEWP>
+    <STP>978.1</STP>
+    <SLP>958.0</SLP>
+    <VISIB>8.6</VISIB>
+    <WDSP>16.5</WDSP>
+    <PRCP>0.00</PRCP>
+    <SNDP>0.0</SNDP>
+    <FRSHTT>100000</FRSHTT>
+    <CLDC>64.9</CLDC>
+    <WNDDIR>119</WNDDIR>
+  </MEASUREMENT>
 </WEATHERDATA>
