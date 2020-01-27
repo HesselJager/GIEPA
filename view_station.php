@@ -66,6 +66,7 @@
     /*set style for content divider*/
     #content{
     	min-height: 24%;
+		padding-left: 2%;
     }
     /*set style for navigation bar*/
     .navbar {
@@ -149,6 +150,11 @@
         <a class="nav-item nav-link" href="help.php" style="color: #fff;">Help</a>
         <a class="nav-item nav-link" href="logout.php" style="color: #fff;">Log out</a>
       </div>
+	 <div style="position:relative; left:20%; color:#184893; background-color:white; padding: 2px; border: 2px solid  #184893;">
+		<?php 
+  		echo "<h2 style='text-align: right;'>" . get_station_name($station_id) . "</h2>";
+		?>
+	</div>
     </div>
   </nav>
   <!--container divider-->
@@ -194,12 +200,10 @@
   }
   </script>
   <div id="content">
-  	<?php 
-  		echo "<h2 style='text-align: center;'>" . get_station_name($station_id) . "</h2>";
-  	?>
+  	
 
   	<div id="current_temperature"></div>
-  	<div id="current_wind_direction">Current wind direction: </div>
+  	<div id="current_wind_direction" style="color:#184893; font-weight: bold;">Current wind direction: </div>
 	<div class="wtable">
 	<h3>Wind measurements</h3>
 	<a id="data_table" class="wtable"></a>
@@ -375,7 +379,7 @@
             });  
         }  
 	</script>
-	
+	</div>
   <footer></footer>
   <!--Closing scripts for bootstrap-->
   <script source="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
