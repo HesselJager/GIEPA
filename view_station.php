@@ -301,7 +301,9 @@
 	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
 	      if (this.readyState == 4 && this.status == 200) 
-          addData(window.myLine, '', this.responseText);
+	      	var today = new Date();
+			var time = today.getHours() + ":" + today.getMinutes();
+          	addData(window.myLine, time, this.responseText);
 	    
 	  }
 	  xmlhttp.open("GET", "ajax_wind_speed.php"+getParam, true);
