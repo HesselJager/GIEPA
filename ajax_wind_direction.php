@@ -5,7 +5,10 @@
 	$stationdata=$_SESSION["measurements"];
 	//ouput the latest dataset of the full data
 	if (array_key_exists(sizeof($stationdata)-1,$stationdata)){
-	echo "Current wind direction: " . wnddir_to_words($stationdata[sizeof($stationdata)-1]->wnddir);
+		$degrees=$stationdata[sizeof($stationdata)-1]->wnddir;
+	createCompass($degrees); 
+	echo "Current wind direction: ".wnddir_to_words($degrees) . "&nbsp; (" . $degrees . "&#176;)";
+	echo "<img  id=\"compass\" src=\"compass.png\"/>";
 	} else{
 	 echo "<p style=\"color:red\">No data for this station</p>";
 	}
