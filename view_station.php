@@ -34,8 +34,27 @@
       height: 100%;
       background-color: #f5f5f5;
       margin: 0;
-      overflow-y: hidden;
     }
+	
+	/*Scrollbar*/
+	/* width */
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 5px grey;
+		border-radius: 10px;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #184893;
+		border-radius: 10px;
+	}
+	
+	
     /*set style for canvas*/
 	canvas{
 	  -moz-user-select: none;
@@ -68,7 +87,7 @@
     }
     /*set style for footer*/
     footer {
-      height: 10%;
+      height: 70px;
       width: 100%;
       background-color: #184893;
       padding: 0px;
@@ -109,9 +128,7 @@
     width: 10%;
     border:1px solid black;
 	}
-	div{
-	padding-left: 0.5%;
-	}
+	
 
   </style>
 </head>
@@ -194,6 +211,7 @@
   </div>
   <script>
   parser = new DOMParser();
+
 
 	var getParam=window.location.search;
 	//set configuration variable
@@ -357,9 +375,9 @@
         }  
 	</script>
 	
-  <!--<footer></footer>-->
+  <footer></footer>
   <!--Closing scripts for bootstrap-->
-  <script sourcey="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+  <script source="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
     crossorigin="anonymous">
   </script>
