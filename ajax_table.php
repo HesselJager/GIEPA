@@ -4,7 +4,7 @@
 
 	$stationdata=$_SESSION["measurements"];
 	//output the latest dataset of the full data
-	$output = "<table id='wind_table' border='1px'><thead><th>Date and Time</th><th>   Windspeed</th><th>Winddirection</th></thead>";
+	$output = "<table id='wind_table' style='width:80%;' border='1px'><thead><th>Date and Time</th><th>   Windspeed</th><th>Winddirection</th></thead>";
 	$output .= '<tbody onscroll="pauseTable()">';
 	$row = "";
 	for($measurementIndex = 0; $measurementIndex < sizeof($stationdata); $measurementIndex++){

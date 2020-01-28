@@ -65,6 +65,7 @@
 	}
     /*set style for content divider*/
     #content{
+		width:100%;
     	min-height: 24%;
 		padding-left: 2%;
     }
@@ -203,17 +204,21 @@
   	
 
   	<div id="current_temperature"></div>
-  	<div id="current_wind_direction" style="color:#184893; font-weight: bold;">Current wind direction: </div>
-	<div class="wtable">
+  	<div id="current_wind_direction" style="color:#184893; font-weight: bold;width:25%;">Current wind direction: </div>
+	
+	<br/>
+	<br/>
+	<div style="display:inline-block; width: 49%;">
 	<h3>Wind measurements</h3>
-	<a id="data_table" class="wtable"></a>
-	<p style="width: 30%;"><button onclick='exporttoxml("#wind_table")' style="width: 50%;">Download Table</button><button onclick='continueTable()' style="width: 50%;">Refresh Table</button></p>
-	<br>
-	<br>
+	<a id="data_table"  class="wtable"></a>
+	<p style="width: 80%;"><button onclick='exporttoxml("#wind_table")' style="width: 50%;">Download Table</button><button onclick='continueTable()' style="width: 50%;">Refresh Table</button></p>
+	</div>
+	<div style="display:inline-block;width: 49%;">
 	<h3>Temperature measurements</h3>
-	<a id="date_temp_table" class="wtable"></a>
-	<p style="width: 30%;"><button onclick='exporttoxml("#temp_table")' style="width: 50%;">Download Table</button><button onclick='continueTable()' style="width: 50%;">Refresh Table</button></p>
-  </div>
+	<a id="date_temp_table"  class="wtable"></a>
+	<p style="width: 80%;"><button onclick='exporttoxml("#temp_table")' style="width: 50%;">Download Table</button><button onclick='continueTable()' style="width: 50%;">Refresh Table</button></p>
+	</div>
+
   <script>
   parser = new DOMParser();
 
