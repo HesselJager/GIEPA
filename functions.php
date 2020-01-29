@@ -70,31 +70,25 @@
 	    public $wdsp;
 	    public $wnddir; 
 	}
-	/* This function parses an xml file and filters based on the stationnumber
+	/* This function parses an bin file and filters based on the stationnumber
 	 * If the stationnumber belongs to a station that is needed an object will be created 
 	 * The object will be put in the measurements array
 	 */
-	function parse_xml($xml_file){
+	 
+	function parse_bin($bin_file){
 		global $measurements;
-		$file_str=file_get_contents($xml_file);
-		$file_str=str_replace("<?xml version=\"1.0\" encoding=\"UTF-8\"?>","",$file_str);
-		$file_str=str_replace("</WEATHERDATA>","",$file_str);
-		$file_str=str_replace("<WEATHERDATA>","",$file_str);
-		$file_str="<?xml version=\"1.0\" encoding=\"UTF-8\"?><WEATHERDATA>".$file_str."</WEATHERDATA>";
-		
-		$xml = simplexml_load_string($file_str);	
-		foreach($xml->children() as $child){
-	        $measurement =new Measurement();
-            $measurement->stn=intval($child->STN);
-			
- 		 	$measurement->date_and_time=date_create($child->DATE." ".$child->TIME);
-	        $measurement->temp=floatval($child->TEMP);
-	        $measurement->wdsp=floatval($child->WDSP);
-	        $measurement->wnddir=floatval($child->WNDDIR);
+		$file=fopen($bin_file, "r");
+		while(! feof($file)){
+			$file_data=fgetcsv($file);
+		   $measurement =new Measurement();
+            $measurement->stn=intval($file_data[0]);
+ 		 	$measurement->date_and_time=date_create($file_data[1]." ".$file_data[2]);
+	        $measurement->temp=floatval($file_data[3]);
+	        $measurement->wdsp=floatval($file_data[8]);
+	        $measurement->wnddir=floatval($file_data[13]);
 	        $measurements=array_merge($measurements,array($measurement));  
-			
-			
 		}
+		fclose($file);
 	}
 
 	/* This function reads wind direction
