@@ -77,7 +77,19 @@
 	 
 	function parse_csv($csv_file){
 		global $measurements;
+		//if file doesnt exist: clear measurements
+		if(! file_exists($csv_file)){
+			$measurements=array();
+			return;
+		}
+		
 		$file=fopen($csv_file, "r");
+		
+		
+		
+		
+		
+		
 		while(! feof($file)){
 			$file_data=fgetcsv($file);
 		   $measurement =new Measurement(); 
