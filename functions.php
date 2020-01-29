@@ -75,12 +75,12 @@
 	 * The object will be put in the measurements array
 	 */
 	 
-	function parse_bin($bin_file){
+	function parse_csv($csv_file){
 		global $measurements;
-		$file=fopen($bin_file, "r");
+		$file=fopen($csv_file, "r");
 		while(! feof($file)){
 			$file_data=fgetcsv($file);
-		   $measurement =new Measurement();
+		   $measurement =new Measurement(); 
             $measurement->stn=intval($file_data[0]);
  		 	$measurement->date_and_time=date_create($file_data[1]." ".$file_data[2]);
 	        $measurement->temp=floatval($file_data[3]);

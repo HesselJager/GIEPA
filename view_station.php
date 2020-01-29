@@ -179,7 +179,7 @@
   window.setInterval(checkTable, 1000);
   function checkTable(){
 	  if(pause_status == false){
-		ReadXML();
+		ReadCSV();
 		showTable();
 		showtempTable();
 		showWdsp(); 
@@ -359,8 +359,8 @@
 	  xmlhttp.send();
 	}
 	
-	//This function reads the needed xml files once
-	function ReadXML(){
+	//This function reads the needed csv files once
+	function ReadCSV(){
 	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
 	      if (this.readyState == 4 && this.status == 200) {
