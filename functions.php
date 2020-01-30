@@ -111,18 +111,18 @@
 			
 			$year=unpack("s",fread($file,2))[1];
 
-			$month=unpack("C*",fread($file,1))[1];
-			$day=unpack("C*",fread($file,1))[1];
-			$hours=unpack("C*",fread($file,1))[1];
-			$minutes=unpack("C*",fread($file,1))[1];
-			$seconds=unpack("C*",fread($file,1))[1];
-			$temperature=unpack("c*",fread($file,1))[1];
-			$temperature_remainder=unpack("C*",fread($file,1))[1];
+			$month=unpack("c",fread($file,1))[1];
+			$day=unpack("c",fread($file,1))[1];
+			$hours=unpack("c",fread($file,1))[1];
+			$minutes=unpack("c",fread($file,1))[1];
+			$seconds=unpack("c",fread($file,1))[1];
+			$temperature=unpack("c",fread($file,1))[1];
+			$temperature_remainder=unpack("c",fread($file,1))[1];
 			fread($file,11);
-			$wdsp=unpack("c*",fread($file,1))[1];
-			$wdsp_remainder=unpack("C*",fread($file,1))[1];
+			$wdsp=unpack("c",fread($file,1))[1];
+			$wdsp_remainder=unpack("c",fread($file,1))[1]; 
 			fread($file,7);
-			$wnddir=unpack("C*",fread($file,2))[1];
+			$wnddir=unpack("s",fread($file,2))[1];
 			
 			
 			$measurement =new Measurement(); 
