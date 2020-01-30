@@ -97,17 +97,18 @@
 		}
 		
 		$file=fopen($bin_file, "rb");
-		$file_size=filesize($bin_file);
 		
 		
 		
 		
-		$end=false;
-		while(! ftell($file)==$file_size){
+		
+		
+		while(!feof($file)){
+			if((ftell($file)+31)==filesize($bin_file)){
+				break;
+			}
 			
 			
-		    $measurement =new Measurement(); 
-            $measurement->stn=intval($name);
 			$year=unpack("s",fread($file,2))[1];
 
 			$month=unpack("C*",fread($file,1))[1];
@@ -121,14 +122,20 @@
 			$wdsp=unpack("c*",fread($file,1))[1];
 			$wdsp_remainder=unpack("C*",fread($file,1))[1];
 			fread($file,7);
-			$wnddir=unpack("s",fread($file,2))[1];
+			$wnddir=unpack("C*",fread($file,2))[1];
 			
+			
+			$measurement =new Measurement(); 
+            $measurement->stn=intval($name);
  		 	$measurement->date_and_time=date_create("$year-$month-$day $hours:$minutes:$seconds");
 	        $measurement->temp=parse_to_float($temperature,$temperature_remainder);
 	        $measurement->wdsp=parse_to_float($wdsp,$wdsp_remainder);
 	        $measurement->wnddir=$wnddir;
 	        $measurements=array_merge($measurements,array($measurement));  
-			print_r($measurement);
+
+		
+			
+
 			
 			
 			
