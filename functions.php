@@ -70,39 +70,68 @@
 	    public $wdsp;
 	    public $wnddir; 
 	}
+	//This functions takes two numbers and adds them together where 1 number will be calculated the remainder
+	function parse_to_float($num,$remainder){
+		if($num<0){
+			return $num-($remainder/10);
+		} else{
+			return $num+($remainder/10);
+		}
+	}
+	
+	
+	
+	
+	
 	/* This function parses an bin file and filters based on the stationnumber
 	 * If the stationnumber belongs to a station that is needed an object will be created 
 	 * The object will be put in the measurements array
 	 */
 	 
-	function parse_csv($csv_file){
+	function parse_bin($bin_file,$name){
 		global $measurements;
 		//if file doesnt exist: clear measurements
-		if(! file_exists($csv_file)){
+		if(! file_exists($bin_file)){
 			$measurements=array();
 			return;
 		}
 		
-		$file=fopen($csv_file, "r");
+		$file=fopen($bin_file, "rb");
+		$file_size=filesize($bin_file);
 		
 		
 		
 		
-		
-		
-		while(! feof($file)){
-			$file_data=fgetcsv($file);
-                        //check for last empty line
-                       if(empty($file_data)) {
-                        break;
-                       } 
-		   $measurement =new Measurement(); 
-            $measurement->stn=intval($file_data[0]);
- 		 	$measurement->date_and_time=date_create($file_data[1]." ".$file_data[2]);
-	        $measurement->temp=floatval($file_data[3]);
-	        $measurement->wdsp=floatval($file_data[8]);
-	        $measurement->wnddir=floatval($file_data[13]);
+		$end=false;
+		while(! ftell($file)==$file_size){
+			
+			
+		    $measurement =new Measurement(); 
+            $measurement->stn=intval($name);
+			$year=unpack("s",fread($file,2))[1];
+
+			$month=unpack("C*",fread($file,1))[1];
+			$day=unpack("C*",fread($file,1))[1];
+			$hours=unpack("C*",fread($file,1))[1];
+			$minutes=unpack("C*",fread($file,1))[1];
+			$seconds=unpack("C*",fread($file,1))[1];
+			$temperature=unpack("c*",fread($file,1))[1];
+			$temperature_remainder=unpack("C*",fread($file,1))[1];
+			fread($file,11);
+			$wdsp=unpack("c*",fread($file,1))[1];
+			$wdsp_remainder=unpack("C*",fread($file,1))[1];
+			fread($file,7);
+			$wnddir=unpack("s",fread($file,2))[1];
+			
+ 		 	$measurement->date_and_time=date_create("$year-$month-$day $hours:$minutes:$seconds");
+	        $measurement->temp=parse_to_float($temperature,$temperature_remainder);
+	        $measurement->wdsp=parse_to_float($wdsp,$wdsp_remainder);
+	        $measurement->wnddir=$wnddir;
 	        $measurements=array_merge($measurements,array($measurement));  
+			print_r($measurement);
+			
+			
+			
 		}
 		fclose($file);
 	}
@@ -167,7 +196,7 @@
 	header('Content-Type: image/png');
 	imagepng($dest_image,"compass.png");
    }
-	
+
 	
 	
 	
