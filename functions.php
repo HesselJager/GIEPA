@@ -104,7 +104,7 @@
 		
 		
 		while(!feof($file)){
-			if((ftell($file)+31)==filesize($bin_file)){
+			if((ftell($file))==filesize($bin_file)){
 				break;
 			}
 			
