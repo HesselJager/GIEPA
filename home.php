@@ -78,6 +78,15 @@
       height: 10%;
       line-height: 80px;
     }
+	/*set style for tekst blok*/
+    #tekstBlokMetWelkom{ 
+      width: 80%;
+      padding: 0px;
+      margin: 0px;
+      border: 0px;
+	  margin: auto;
+	  padding-top: 2%;
+    }
     /*set style for header*/
     header{
       height: 150px;  
@@ -130,7 +139,13 @@
     width: 10%;
     border:1px solid black;
 	}
-	
+	/*Made to center fish*/
+	.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	}
 
   </style>
 </head>
@@ -157,20 +172,13 @@
 	</div>
     </div>
   </nav>
-  <!--container divider-->
-  <div class="container">
-	<div style="width:75%; float: right; margin-right: -11%;">
-	  <!--Canvas here-->
-	  <canvas id="canvas" style=""></canvas>
-    </div>
-    <!--Code that checks if error message needs to be displayed-->
-    <?php
-	  if($error_message) {
-	  echo '<div class="alert alert-danger" role="alert" style="margin-top: 30px;">
-  		<b>ERROR: </b>Selected weather station is not available for this application. <a href="home.php" class="alert-link">Go back to the homepage.</a>
-		</div>';
-	  }
-    ?>
+  <div id="content">
+	<div id="tekstBlokMetWelkom">
+	<h1 style="color:#184893">Welcome!</h1>
+	Welcome to the webpage of GIEPA's Weather Application. This webpage will give you information about the weather in The Gambia and the surrounding seas. 
+	With the information that this website provides you will be able to see the best spot to fish at this current time. 
+	</div>
+	<img src="https://willemwever.kro-ncrv.nl/sites/default/files/styles/article_header/public/field/image/Fishing_boat_in_the_Canary_Islands.jpeg?itok=_MMAFfFn" width="360" height="250" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A; width="360" height="250" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A; " class="center">
   </div>
   <script>
   var pause_status = false;
@@ -211,11 +219,6 @@
 	<h3>Wind measurements</h3>
 	<a id="data_table"  class="wtable"></a>
 	<p style="width: 80%;"><button onclick='exporttoxml("#wind_table")' style="width: 50%;">Download Table</button><button onclick='continueTable()' style="width: 50%;">Refresh Table</button></p>
-	</div>
-	<div style="display:inline-block;width: 49%;">
-	<h3>Temperature measurements</h3>
-	<a id="date_temp_table"  class="wtable"></a>
-	<p style="width: 80%;"><button onclick='exporttoxml("#temp_table")' style="width: 50%;">Download Table</button><button onclick='continueTable()' style="width: 50%;">Refresh Table</button></p>
 	</div>
 
   <script>
