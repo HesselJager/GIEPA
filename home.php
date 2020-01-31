@@ -180,6 +180,21 @@
 	</div>
 	<img src="https://willemwever.kro-ncrv.nl/sites/default/files/styles/article_header/public/field/image/Fishing_boat_in_the_Canary_Islands.jpeg?itok=_MMAFfFn" width="360" height="250" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A; width="360" height="250" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A; " class="center">
   </div>
+  <!--container divider-->
+  <div class="container">
+	<div style="width:75%; float: right; margin-right: -11%;">
+	  <!--Canvas here-->
+	  <canvas id="canvas" style=""></canvas>
+    </div>
+    <!--Code that checks if error message needs to be displayed-->
+    <?php
+	  if($error_message) {
+	  echo '<div class="alert alert-danger" role="alert" style="margin-top: 30px;">
+  		<b>ERROR: </b>Selected weather station is not available for this application. <a href="home.php" class="alert-link">Go back to the homepage.</a>
+		</div>';
+	  }
+    ?>
+	</div>
   <script>
   var pause_status = false;
   //Interval for showtemp function
