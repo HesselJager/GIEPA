@@ -231,9 +231,7 @@
 	<br/>
 	<br/>
 	<div style="display:inline-block; width: 49%;">
-	<h3>Wind measurements</h3>
 	<a id="data_table"  class="wtable"></a>
-	<p style="width: 80%;"><button onclick='exporttoxml("#wind_table")' style="width: 50%;">Download Table</button><button onclick='continueTable()' style="width: 50%;">Refresh Table</button></p>
 	</div>
 
   <script>
