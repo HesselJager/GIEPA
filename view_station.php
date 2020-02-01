@@ -66,7 +66,7 @@
     /*set style for content divider*/
     #content{
 		width:100%;
-    	min-height: 24%;
+    	min-height: 77vh;
 		padding-left: 2%;
     }
     /*set style for navigation bar*/
@@ -217,7 +217,7 @@
 	<div style="display:inline-block;width: 49%;">
 	<a id="date_temp_table"  class="wtable"></a>
 	</div>
-
+</div>
   <script>
   parser = new DOMParser();
 
