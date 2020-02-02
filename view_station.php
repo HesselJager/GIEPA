@@ -115,7 +115,7 @@
 	tbody, thead tr { display: block; }
 	
 	tbody {
-    height: 200px;
+    height: 300px;
     overflow-y: auto;
     overflow-x: hidden;
 	}
@@ -163,7 +163,7 @@
   <div class="container">
 	<?php 
 		if(check_wind_station($station_id) == true){
-			echo '<div style="width:75%; float: right; margin-right: -11%;"><canvas id="canvas" style=""></canvas></div>';
+			echo '<div style="width:75%; float: right;"><canvas id="canvas" style=""></canvas></div>';
 		}
 		if($error_message) {
 		echo '<div class="alert alert-danger" role="alert" style="margin-top: 30px;">
@@ -172,10 +172,8 @@
 		}
     ?>
   </div>
-  <?php if(check_wind_station($station_id) == true){
-			echo '<div id="current_wind_direction" style="color:#184893; font-weight: bold;width:25%; padding-left:2%;">Current wind direction: </div>';
-		}
-	?>
+		<div id="current_wind_direction" style="color:#184893; font-weight: bold;width:25%; padding-left:2%;"></div>
+		<div id="current_temperature" style="color:#184893; font-weight: bold;width:40%; padding-left:2%;"></div>
   </div>
   <script>
   var pause_status = false;
@@ -183,15 +181,17 @@
   window.setInterval(checkTable, 1000);
   function checkTable(){
 	  if(pause_status == false){
-		ReadCSV();
+		ReadBin();
 		showTable();
 		showtempTable();
 		showWdsp(); 
+		showTemp();
 		removeData(window.myLine);
 		showWnddir();
 	  }
 	  else{
-		ReadXML();
+		ReadBin();
+		showTemp();
 		showWdsp(); 
 		removeData(window.myLine);
 		showWnddir();
@@ -205,16 +205,12 @@
   }
   </script>
   <div id="content">
-  	
-
- 
-	
 	<br/>
 	<br/>
-	<div style="display:inline-block; width: 49%;">
+	<div style="width: 49%;">
 	<a id="data_table"  class="wtable"></a>
 	</div>
-	<div style="display:inline-block;width: 49%;">
+	<div style="width: 49%;">
 	<a id="date_temp_table"  class="wtable"></a>
 	</div>
 </div>
@@ -312,14 +308,13 @@
 	  xmlhttp.open("GET", "ajax_wind_direction.php"+getParam, true);
 	  xmlhttp.send();
 	}
-		    //function to show temperature
-	function showTemp() {
+	//function to show temperature
+	function showTemp(){
 	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
 	      if (this.readyState == 4 && this.status == 200) 
-          addData(window.myLine, '', this.responseText);
-	    
-	  }
+          document.getElementById("current_temperature").innerHTML = this.responseText;
+	    }
 	  xmlhttp.open("GET", "ajax_temperature.php"+getParam, true);
 	  xmlhttp.send();
 	}
@@ -359,7 +354,7 @@
 	}
 	
 	//This function reads the needed csv files once
-	function ReadCSV(){
+	function ReadBin(){
 	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.onreadystatechange = function() {
 	      if (this.readyState == 4 && this.status == 200) {

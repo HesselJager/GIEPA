@@ -3,12 +3,7 @@
 	session_start();
 
 	$stationdata=$_SESSION["measurements"];
-	if($stationdata == null){
-		$station_id = 0;
-	}
-	else{
-		$station_id = $stationdata[0]->stn;
-	}
+	$station_id=$_GET['station'];
 	$output = "";
 	if(check_wind_station($station_id) == true){
 		//output the latest dataset of the full data

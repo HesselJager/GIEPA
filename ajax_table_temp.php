@@ -3,16 +3,11 @@
 	session_start();
 	
 	$stationdata=$_SESSION["measurements"];
-	if($stationdata == null){
-		$station_id = 0;
-	}
-	else{
-		$station_id = $stationdata[0]->stn;
-	}
+	$station_id=$_GET['station'];
 	$output = "";
 	if(check_temp_station($station_id) == true){
 		//output the latest dataset of the full data
-		$output .= "<h3>Temperature measurements</h3><table style='width:80%;' id='temp_table' border='1px'><thead><th>Date and Time</th><th>Temperature</th></thead>";
+		$output .= "<h3>Daily temperature measurements</h3><table style='width:80%;' id='temp_table' border='1px'><thead><th>Date and Time</th><th>Temperature</th></thead>";
 		$output .= '<tbody onscroll="pauseTable()">';
 		$row = "";
 		$array = array();
@@ -30,6 +25,9 @@
 					$row = "<tr><td>" . $time . "</td><td>" . $temp . "&#8451;</td></tr>" . $row;
 				}	
 			}
+		}
+		if($array < 1){
+			$output .= "<tr><td> No Data </td><td> No Data </td></tr>";
 		}
 		$output .= $row . "</tbody></table>";
 		$output .= '<p style="width: 80%;"><button onclick="exporttoxml(\'#temp_table\')" style="width: 50%;">Download Table</button><button onclick="continueTable()" style="width: 50%;">Refresh Table</button></p>';
