@@ -4,10 +4,9 @@
 	$USER_PASSWORD = '$argon2i$v=19$m=1024,t=2,p=2$RGVNME4weFFwMmMyd01IZw$a28OeXYplLovOamT/0VITKf3kMsWi+mQVMJjAVKlxcw'; // GAINEXPRAG2020
 
 	// Array of the stations used for this project
-	$allowed_stations = array(617010, 85940, 619020, 889030, 888890, 888900, 888910, 689060);
-
-	// Array with the names of the stations, the names are at the exact locations as the $allowes_stations array
-	$station_locations = array("BANJUL/YUNDUM", "SAL", "WIDE AWAKE FIELD", "GRYTVIKEN S.GEORGIA", "MOUNT PLEASANT AIRP", "STANLEY", "STANLEY AIRPORT", "GOUGH ISLAND");
+	$allowed_stations = array("617010" => "BANJUL/YUNDUM", "85940" => "SAL", "619020" => "WIDE AWAKE FIELD", "889030" => "GRYTVIKEN S.GEORGIA", "888890" => "MOUNT PLEASANT AIRP", "888900" => "STANLEY", "888910" => "STANLEY AIRPORT", "689060" => "GOUGH ISLAND");
+	$station_temp = array(889030, 888890, 888900, 888910, 689060, 619020);
+	$station_wind = array(617010, 85940);
 	/* This function compares username and password credentials
 	 * and checks if the input is correct
 	 */
@@ -28,29 +27,46 @@
 			header('location: index.php');
 		}
 	}
-	// Array of the stations used for this project
-	$allowed_stations = array(617010, 85940, 619020, 889030, 888890, 888900, 888910, 689060);
 	/* This function checks if the selected weather station
 	 * is one of the stations used for this project
 	 */
 	function check_station($station) {
 		global $allowed_stations;
-		if(in_array($station, $allowed_stations)) {
+		if(array_key_exists($station, $allowed_stations)) {
 			return true;
 		} else {
 			return false;
 		}
 	}
-
+	/* This function checks if the selected weather station
+	 * is one of the stations that needs temperature measurements
+	 */
+	function check_temp_station($station){
+		global $station_temp;
+		if(array_key_exists($station, $station_temp)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	/* This function checks if the selected weather station
+	 * is one of the stations that needs wind measurements
+	 */
+	function check_wind_station($station){
+		global $station_wind;
+		if(in_array($station, $station_wind)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	/* This function returns the name of a station. It uses the key of
 	 * the $allowed_stations array to search the $station_locations array
 	 */
 	function get_station_name($station) {
-		global $allowed_stations, $station_locations;
+		global $allowed_stations;
 
-		$key = array_search($station, $allowed_stations);
-
-		$name = $station_locations[$key];
+		$name = $allowed_stations[$station];
 
 		return $name;
 	}
@@ -97,38 +113,45 @@
 		}
 		
 		$file=fopen($bin_file, "rb");
-		$file_size=filesize($bin_file);
 		
 		
 		
 		
-		$end=false;
-		while(! ftell($file)==$file_size){
+		
+		
+		while(!feof($file)){
+			if((ftell($file))==filesize($bin_file)){
+				break;
+			}
 			
 			
-		    $measurement =new Measurement(); 
-            $measurement->stn=intval($name);
 			$year=unpack("s",fread($file,2))[1];
 
-			$month=unpack("C*",fread($file,1))[1];
-			$day=unpack("C*",fread($file,1))[1];
-			$hours=unpack("C*",fread($file,1))[1];
-			$minutes=unpack("C*",fread($file,1))[1];
-			$seconds=unpack("C*",fread($file,1))[1];
-			$temperature=unpack("c*",fread($file,1))[1];
-			$temperature_remainder=unpack("C*",fread($file,1))[1];
+			$month=unpack("c",fread($file,1))[1];
+			$day=unpack("c",fread($file,1))[1];
+			$hours=unpack("c",fread($file,1))[1];
+			$minutes=unpack("c",fread($file,1))[1];
+			$seconds=unpack("c",fread($file,1))[1];
+			$temperature=unpack("c",fread($file,1))[1];
+			$temperature_remainder=unpack("c",fread($file,1))[1];
 			fread($file,11);
-			$wdsp=unpack("c*",fread($file,1))[1];
-			$wdsp_remainder=unpack("C*",fread($file,1))[1];
+			$wdsp=unpack("c",fread($file,1))[1];
+			$wdsp_remainder=unpack("c",fread($file,1))[1]; 
 			fread($file,7);
 			$wnddir=unpack("s",fread($file,2))[1];
 			
+			
+			$measurement =new Measurement(); 
+            $measurement->stn=intval($name);
  		 	$measurement->date_and_time=date_create("$year-$month-$day $hours:$minutes:$seconds");
 	        $measurement->temp=parse_to_float($temperature,$temperature_remainder);
 	        $measurement->wdsp=parse_to_float($wdsp,$wdsp_remainder);
 	        $measurement->wnddir=$wnddir;
 	        $measurements=array_merge($measurements,array($measurement));  
-			print_r($measurement);
+
+		
+			
+
 			
 			
 			

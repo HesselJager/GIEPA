@@ -66,7 +66,7 @@
     /*set style for content divider*/
     #content{
 		width:100%;
-    	min-height: 24%;
+    	min-height: 77vh;
 		padding-left: 2%;
     }
     /*set style for navigation bar*/
@@ -159,19 +159,23 @@
     </div>
   </nav>
   <!--container divider-->
+  <div>
   <div class="container">
-	<div style="width:75%; float: right; margin-right: -11%;">
-	  <!--Canvas here-->
-	  <canvas id="canvas" style=""></canvas>
-    </div>
-    <!--Code that checks if error message needs to be displayed-->
-    <?php
-	  if($error_message) {
-	  echo '<div class="alert alert-danger" role="alert" style="margin-top: 30px;">
+	<?php 
+		if(check_wind_station($station_id) == true){
+			echo '<div style="width:75%; float: right; margin-right: -11%;"><canvas id="canvas" style=""></canvas></div>';
+		}
+		if($error_message) {
+		echo '<div class="alert alert-danger" role="alert" style="margin-top: 30px;">
   		<b>ERROR: </b>Selected weather station is not available for this application. <a href="home.php" class="alert-link">Go back to the homepage.</a>
 		</div>';
-	  }
+		}
     ?>
+  </div>
+  <?php if(check_wind_station($station_id) == true){
+			echo '<div id="current_wind_direction" style="color:#184893; font-weight: bold;width:25%; padding-left:2%;">Current wind direction: </div>';
+		}
+	?>
   </div>
   <script>
   var pause_status = false;
@@ -203,22 +207,17 @@
   <div id="content">
   	
 
-  	<div id="current_temperature"></div>
-  	<div id="current_wind_direction" style="color:#184893; font-weight: bold;width:25%;">Current wind direction: </div>
+ 
 	
 	<br/>
 	<br/>
 	<div style="display:inline-block; width: 49%;">
-	<h3>Wind measurements</h3>
 	<a id="data_table"  class="wtable"></a>
-	<p style="width: 80%;"><button onclick='exporttoxml("#wind_table")' style="width: 50%;">Download Table</button><button onclick='continueTable()' style="width: 50%;">Refresh Table</button></p>
 	</div>
 	<div style="display:inline-block;width: 49%;">
-	<h3>Temperature measurements</h3>
 	<a id="date_temp_table"  class="wtable"></a>
-	<p style="width: 80%;"><button onclick='exporttoxml("#temp_table")' style="width: 50%;">Download Table</button><button onclick='continueTable()' style="width: 50%;">Refresh Table</button></p>
 	</div>
-
+</div>
   <script>
   parser = new DOMParser();
 
