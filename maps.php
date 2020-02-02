@@ -387,11 +387,8 @@
         //browser doesn't support geolocation
         handleLocationError(false, infoWindowGeolocation, map.getCenter());
       }
-      //open Gambia infoWindow and link to activeInfoWindow after 1500ms
-      setTimeout(function() {
-        infoWindowGambia.open(map);
-        activeInfoWindow = infoWindowGambia;
-      }, 1500);
+      //Gambia infoWindow link to activeInfoWindow
+      activeInfoWindow = infoWindowGambia;
     }
     // This function handles errors for geolocation
     function handleLocationError(browserHasGeolocation, infoWindowGeolocation, pos_geolocation) {
