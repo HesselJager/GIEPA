@@ -54,6 +54,13 @@
 		border-radius: 10px;
 	}
 	
+  .bigdiv img {
+   position:absolute;
+   left:65%;
+   top:15%;
+   margin-left:-10px;
+   margin-top:-10px;
+}
 	
     /*set style for canvas*/
 	canvas{
@@ -80,7 +87,7 @@
     }
 	/*set style for tekst blok*/
     #tekstBlokMetWelkom{ 
-      width: 80%;
+      width: 95%;
       padding: 0px;
       margin: 0px;
       border: 0px;
@@ -175,10 +182,11 @@
   <div id="content">
 	<div id="tekstBlokMetWelkom">
 	<h1 style="color:#184893">Welcome!</h1>
-	Welcome to the webpage of GIEPA's Weather Application. This webpage will give you information about the weather in The Gambia and the surrounding seas. 
-	With the information that this website provides you will be able to see the best spot to fish at this current time. 
+	<p><br/>Welcome to the homepage of GIEPA's Weather Application. This website will give you weather-information about the wind<br />in The Gambia and the surrounding seas, as well as the local temperature in the South Atlantic Ocean.<br />With the information that this website provides you will be able to locate the best spot to fish at this current time.<br/><br/></p>
 	</div>
-	<img src="https://willemwever.kro-ncrv.nl/sites/default/files/styles/article_header/public/field/image/Fishing_boat_in_the_Canary_Islands.jpeg?itok=_MMAFfFn" width="360" height="250" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A; width="360" height="250" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A; " class="center">
+  <div class="bigdiv">
+	<img src="https://willemwever.kro-ncrv.nl/sites/default/files/styles/article_header/public/field/image/Fishing_boat_in_the_Canary_Islands.jpeg?itok=_MMAFfFn" width="300" height="208" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A;" width="300" height="208" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A; " class="center">
+</div>
   </div>
   <!--container divider-->
   <div class="container">
