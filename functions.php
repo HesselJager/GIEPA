@@ -1,7 +1,7 @@
 <?php
 	// Set username and password
 	$USER_USERNAME = "user";
-	$USER_PASSWORD = '$argon2i$v=19$m=1024,t=2,p=2$RGVNME4weFFwMmMyd01IZw$a28OeXYplLovOamT/0VITKf3kMsWi+mQVMJjAVKlxcw'; // GAINEXPRAG2020
+	$USER_PASSWORD = '$argon2i$v=19$m=1024,t=2,p=2$RGVNME4weFFwMmMyd01IZw$a28OeXYplLovOamT/0VITKf3kMsWi+mQVMJjAVKlxcw';
 
 	// Array of the stations used for this project
 	$allowed_stations = array("617010" => "BANJUL/YUNDUM", "85940" => "SAL", "619020" => "WIDE AWAKE FIELD", "889030" => "GRYTVIKEN S.GEORGIA", "888890" => "MOUNT PLEASANT AIRP", "888900" => "STANLEY", "888910" => "STANLEY AIRPORT", "689060" => "GOUGH ISLAND");
