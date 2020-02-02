@@ -224,7 +224,7 @@
   </script>
   <div id="content">
   	
-
+	<div style="color:#184893; font-weight: bold;width:50%;">BANJUL/YUNDUM:</div>
   	<div id="current_temperature"></div>
   	<div id="current_wind_direction" style="color:#184893; font-weight: bold;width:25%;">Current wind direction: </div>
 	

@@ -5,8 +5,8 @@
 
 	// Array of the stations used for this project
 	$allowed_stations = array("617010" => "BANJUL/YUNDUM", "85940" => "SAL", "619020" => "WIDE AWAKE FIELD", "889030" => "GRYTVIKEN S.GEORGIA", "888890" => "MOUNT PLEASANT AIRP", "888900" => "STANLEY", "888910" => "STANLEY AIRPORT", "689060" => "GOUGH ISLAND");
-	$station_temp = array(889030, 888890, 888900, 888910, 689060, 619020);
-	$station_wind = array(617010, 85940);
+	$stations_temp = array(889030, 888890, 888900, 888910, 689060, 619020);
+	$stations_wind = array(617010, 85940);
 	/* This function compares username and password credentials
 	 * and checks if the input is correct
 	 */
@@ -42,8 +42,8 @@
 	 * is one of the stations that needs temperature measurements
 	 */
 	function check_temp_station($station){
-		global $station_temp;
-		if(array_key_exists($station, $station_temp)) {
+		global $stations_temp;
+		if(in_array($station, $stations_temp)) {
 			return true;
 		} else {
 			return false;
@@ -53,8 +53,8 @@
 	 * is one of the stations that needs wind measurements
 	 */
 	function check_wind_station($station){
-		global $station_wind;
-		if(in_array($station, $station_wind)) {
+		global $stations_wind;
+		if(in_array($station, $stations_wind)) {
 			return true;
 		} else {
 			return false;
