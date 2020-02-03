@@ -151,7 +151,7 @@
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #DC292A; ">
     <!--GIEPA logo-->
     <a class="navbar-brand" href="home.php">
-      <img src="logo-giepa.png" width="180" height="60" alt="" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
+      <img src="logo-giepa.png" width="180" height="60" alt="Logo GIEPA" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
     </a>
     <!--Links to homepage, stations and logout-->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -180,7 +180,7 @@
       </div>
       <div id="imgColumn">
         <figure>
-          <img src="navbar2.png" width="60%" style="border: 4px solid #184893;">
+          <img src="navbar2.png" alt="Navigation bar" width="60%" style="border: 4px solid #184893;">
           <figcaption>
             This is the navigation bar, everything outlined in a blue rectangle is clickable.
           </figcaption>
@@ -199,7 +199,7 @@
       </div>
       <div id="imgColumn" style="">
         <figure>
-          <img src="logo-giepa.png" width="50%" alt="" style="border: 4px solid  #184893; ">
+          <img src="logo-giepa.png" alt="Logo GIEPA" width="50%" alt="" style="border: 4px solid  #184893; ">
           <figcaption>
             You can always left-click on <b>the GIEPA logo</b> on the navigation bar to go straight to the homepage
           </figcaption>
@@ -224,7 +224,7 @@
       </div>
       <div id="imgColumn">
         <figure>
-          <img src="markers.png" width="51%" style="border: 4px solid #DC292A;">
+          <img src="markers.png" alt="Red and blue marker" width="51%" style="border: 4px solid #DC292A;">
           <figcaption style="padding-right: 12px">
             Left: Weather Station marker &emsp; | &emsp; Right: Geolocation marker.
           </figcaption>
@@ -241,7 +241,7 @@
       </div>
       <div id="imgColumn">
         <figure>
-          <img src="infowindow.png" width="63%" style="border: 4px solid #DC292A;">
+          <img src="infowindow.png" alt="infowindow" width="63%" style="border: 4px solid #DC292A;">
           <figcaption>
             Hover your mouse over a weather station marker of your choosing as shown on the left,
             <br />
@@ -268,7 +268,7 @@
       </div>
       <div id="imgColumn">
         <figure>
-          <img src="measurements.png" width="63%" style="border: 4px solid #184893;">
+          <img src="measurements.png" alt="Three measurement visualisations" width="63%" style="border: 4px solid #184893;">
           <figcaption>
             left: wind direction | top-right: windspeed | bottom-right: temperature.
           </figcaption>
@@ -289,7 +289,7 @@
       </div>
       <div id="imgColumn">
         <figure>
-          <img src="table.png" width="50%" style="border: 4px solid #184893;">
+          <img src="table.png" alt="Data table" width="50%" style="border: 4px solid #184893;">
           <figcaption>
             To download or refresh the table, click the buttons outlined with blue rectangles
             <br />

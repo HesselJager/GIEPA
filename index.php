@@ -116,7 +116,7 @@
   </head>
   <body class="text-center">
     <form class="form-signin" method="post" action="">
-      <img class="mb-4" src="logo-giepa.png" alt="" style="width: 80%;">
+      <img class="mb-4" src="https://www.giepa.gm/sites/default/files/logo-giepa.png" alt="" style="width: 80%;">
 
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 
