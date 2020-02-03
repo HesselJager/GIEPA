@@ -270,7 +270,7 @@
         <figure>
           <img src="measurements.png" width="63%" style="border: 4px solid #184893;">
           <figcaption>
-            Measurement visualisations; &emsp; left: wind direction | top-right: windspeed | bottom-right: temperature.
+            left: wind direction | top-right: windspeed | bottom-right: temperature.
           </figcaption>
         </figure>
       </div>
@@ -281,24 +281,30 @@
         <h4>Table data</h4>
         <p>
           All stations save their data in <b>a table</b> and is visible on the station webpage. <b>You can download this table</b> in by left-clicking on the <b>Download Table</b> button.
-          <br/>
+          <hr/>
           The table does <b>not</b> automatically update, but you <b>can refresh the table</b> by left-clickinh the <b>Refresh Table</b> button.
-        </p>
-        <hr />
-        <h4 style="padding-top: 15px;">Logging out</h4>
-        <p>
-          Left-clicking on <b>Log out</b> on the navigation bar will send you back to the login screen. You should <b>ALWAYS</b> log out when you are leaving the computer <b>unsupervised</b>, so that unauthorised people cannot access this application.
+          <hr />
+          <b>Note:</b> South Atlantic stations display temperature & the Gambia stations windspeed and direction.
         </p>
       </div>
       <div id="imgColumn">
         <figure>
-          <img src="table.png" width="63%" style="border: 4px solid #184893;">
+          <img src="table.png" width="50%" style="border: 4px solid #184893;">
           <figcaption>
             To download or refresh the table, click the buttons outlined with blue rectangles
             <br />
             Note: South Atlantic stations display temperature & the Gambia stations windspeed and direction
           </figcaption>
         </figure>
+      </div>
+    </div>
+    <div id="textRow">
+      <hr />
+        <div id="textColumn">
+        <h4 style="padding-top: 15px;">Logging out</h4>
+        <p>
+          Left-clicking on <b>Log out</b> on the navigation bar will send you back to the login screen. You should <b>ALWAYS</b> log out when you are leaving the computer <b>unsupervised</b>, so that unauthorised people cannot access this application.
+        </p>
       </div>
     </div>
   </div>
