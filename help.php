@@ -25,11 +25,29 @@
       height: 100%;
       background-color: #f5f5f5;
       margin: 0;
-      overflow-y: hidden;
     }
+
+    /*Scrollbar*/
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #184893;
+    border-radius: 10px;
+  }
     /*set style for content divider*/
     #content{
     	min-height: 80%;
+      padding: 2%;
 		/*border: 5px;
 		border-style: solid;
 		border-color: #184893;*/
@@ -44,15 +62,51 @@
       height: 10%;
       line-height: 80px;
     }
-	/*set style for tekst blok*/
-    #tekstBlokMetHelp{ 
-      width: 80%;
-      padding: 0px;
+
+    /*set style for tekst blok*/
+    #textRow{ 
+      width: 100%;
+      height: 100%;
       margin: 0px;
       border: 0px;
-	  margin: auto;
-	  padding-top: 2%;
+      margin: auto;
+      padding-top: 10px;
+      position: relative;
     }
+
+    #textColumn {
+      float: left;
+      width: 40%;
+    }
+
+    #imgColumn {
+      float: left;
+      text-align: center;
+      width: 60%;
+    }
+
+    #textRow:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    figure {
+      padding-left: 30px;
+      padding-top: 15px;
+    }
+
+    h4 {
+      color:#DC292A;
+      padding-bottom: 15px;
+    }
+
+    figcaption {
+      color: #184893;
+      font-style: italic;
+      font-size: small;
+    }
+
     /*set style for header*/
     header{
       height: 150px;  
@@ -96,8 +150,8 @@
   <!--The navigation bar on the top of the webpage-->
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #DC292A; ">
     <!--GIEPA logo-->
-    <a class="navbar-brand" href="#">
-      <img src="https://www.giepa.gm/sites/default/files/logo-giepa.png" width="180" height="60" alt="" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
+    <a class="navbar-brand" href="home.php">
+      <img src="logo-giepa.png" width="180" height="60" alt="" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
     </a>
     <!--Links to homepage, stations and logout-->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -112,15 +166,141 @@
   
   <!--content divider-->
   <div id="content">
-	<div id="tekstBlokMetHelp">
-	<h1 style="color:#184893">Help</h1>
-	Hello and welcome to the webpage of GIEPA's Weather Application. On this webpage you'll be able to see information about both temperture and wind in and surrounding The Gambia. <br>
-	In the "Home" tab you will find a general overview of the information about the wind and temperature. The "Stations" tab is for more region specific information regarding the weather. <br>
-	In the "Stations" tab you will see a map with multiple red markers and one blue marker. The red markers represent weather stations and the blue marker your current position. Clicking one of these red markers will give you
-	information about the the temperature and wind speed and wind direction given by the weather station. You can choose between viewing the information in a graph or in a table. 
-	The table can be downloaded by pressing the "Download table" button.
-	
-	</div>
+	  <div id="textRow" style="text-align: center;">
+    	<h1 style="color:#184893">Help</h1>
+    	<p><b>This page is meant to help you out with any questions regarding the use of the GIEPA Weather Application.</b></p>
+    </div>
+    <div id="textRow">
+      <hr />
+      <div id="textColumn">
+        <h4>Navigation bar</h4>
+        <p>
+          The red bar on the top of the website is called the <b>navigation bar</b>. By clicking with your left mouse-button, known as <b>Left-clicking</b> going forward, on the text-boxes you can go to the other pages on the website.
+        </p>
+      </div>
+      <div id="imgColumn">
+        <figure>
+          <img src="navbar2.png" width="60%" style="border: 4px solid #184893;">
+          <figcaption>
+            This is the navigation bar, everything outlined in a blue rectangle is clickable.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div id="textRow">
+      <hr />  
+      <div id="textColumn">
+      <h4>Homepage</h4>
+      <p>
+        This page is the first page you visit after logging-in and containts a brief welcome message.It also shows the weather data of the weather station <b>Banjul/Yundum </b>, which is actually the <b>only</b> station located on Gambian soil.
+        <br />
+        To go back to the homepage, left-click <b>Home</b> on the navigation bar.
+      </p>
+      </div>
+      <div id="imgColumn" style="">
+        <figure>
+          <img src="logo-giepa.png" width="50%" alt="" style="border: 4px solid  #184893; ">
+          <figcaption>
+            You can always left-click on <b>the GIEPA logo</b> on the navigation bar to go straight to the homepage
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div id="textRow">
+      <hr />
+      <div id="textColumn">
+        <h4>Map of stations</h4>
+        <p>
+          Left-clicking on <b>Stations</b> sends you to the webpage with a map of the world, which contains a <b>total of 9 markers</b>.
+          <hr />
+        </p>
+        <p style="padding-top: 5px">
+          <b>Every red marker</b> represents an individual weather station. Only weather stations in The Gambia area + South Atlantic are marked, for a total of 8 red markers. 
+        </p>
+          <hr />
+        <p style="padding-top: 5px">
+          <b>The single blue marker</b> represents the user's current location, also known as your <b>Geolocation</b>.
+        </p>
+      </div>
+      <div id="imgColumn">
+        <figure>
+          <img src="markers.png" width="51%" style="border: 4px solid #DC292A;">
+          <figcaption style="padding-right: 12px">
+            Left: Weather Station marker &emsp; | &emsp; Right: Geolocation marker.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div id="textRow">
+      <hr />
+      <div id="textColumn">
+      <h4>Selecting a station</h4>
+      <p>
+        Left-clicking a <b>red marker</b> will open up a window on top of the marker that shows the station's name and <b>a button</b> with the text <b>Select this station</b>. Left-click the button to go to that station's measurements.
+      </p>
+      </div>
+      <div id="imgColumn">
+        <figure>
+          <img src="infowindow.png" width="63%" style="border: 4px solid #DC292A;">
+          <figcaption>
+            Hover your mouse over a weather station marker of your choosing as shown on the left,
+            <br />
+            then left-click on that marker to get the result as shown on the right.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div id="textRow">
+      <hr />
+      <div id="textColumn">
+        <h4>Station information</h4>
+        <p>
+          <b>The Gambia stations</b> display the local current windspeed <b>in km/h</b> & wind direction, and are updated <b>every second</b>. 
+          <br />
+          These stations visualise the windspeed <b>via linegraph</b> and the wind-direction <b>via text and compass</b>.
+        </p>
+        <hr />
+        <p style="padding-top: 5px;">
+          <b>The South Atlantic stations</b> display the local temperature <b>in °C</b>, and are <b>updated daily</b>.
+          <br />
+          These stations visualise the temperature <b>via text</b>.
+        </p>
+      </div>
+      <div id="imgColumn">
+        <figure>
+          <img src="measurements.png" width="63%" style="border: 4px solid #184893;">
+          <figcaption>
+            Measurement visualisations; &emsp; left: wind direction | top-right: windspeed | bottom-right: temperature.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div id="textRow">
+      <hr />
+      <div id="textColumn">
+        <h4>Table data</h4>
+        <p>
+          All stations save their data in <b>a table</b> and is visible on the station webpage. <b>You can download this table</b> in by left-clicking on the <b>Download Table</b> button.
+          <br/>
+          The table does <b>not</b> automatically update, but you <b>can refresh the table</b> by left-clickinh the <b>Refresh Table</b> button.
+        </p>
+        <hr />
+        <h4 style="padding-top: 15px;">Logging out</h4>
+        <p>
+          Left-clicking on <b>Log out</b> on the navigation bar will send you back to the login screen. You should <b>ALWAYS</b> log out when you are leaving the computer <b>unsupervised</b>, so that unauthorised people cannot access this application.
+        </p>
+      </div>
+      <div id="imgColumn">
+        <figure>
+          <img src="table.png" width="63%" style="border: 4px solid #184893;">
+          <figcaption>
+            To download or refresh the table, click the buttons outlined with blue rectangles
+            <br />
+            Note: South Atlantic stations display temperature & the Gambia stations windspeed and direction
+          </figcaption>
+        </figure>
+      </div>
+    </div>
   </div>
   <!--footer-->
   <footer></footer>

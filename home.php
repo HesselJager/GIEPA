@@ -85,15 +85,35 @@
       height: 10%;
       line-height: 80px;
     }
+	
+    #textColumn1 {
+    	float: left;
+    	width: 60%;
+    }
+
+    #textColumn2 {
+    	float: left;
+    	width: 40%;
+    }
+
+
 	/*set style for tekst blok*/
-    #tekstBlokMetWelkom{ 
-      width: 95%;
+    #textRow{ 
+      width: 100%;
+      height: 100%;
       padding: 0px;
       margin: 0px;
       border: 0px;
 	  margin: auto;
 	  padding-top: 2%;
     }
+
+    #textRow:after {
+    	content: "";
+    	display: table;
+    	clear: both;
+    }
+
     /*set style for header*/
     header{
       height: 150px;  
@@ -161,8 +181,8 @@
   <!--The navigation bar on the top of the webpage-->
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #DC292A; ">
     <!--GIEPA logo-->
-    <a class="navbar-brand" href="#">
-      <img src="https://www.giepa.gm/sites/default/files/logo-giepa.png" width="180" height="60" alt="" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
+    <a class="navbar-brand" href="home.php">
+      <img src="logo-giepa.png" width="180" height="60" alt="" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
     </a>
     <!--Links to homepage, stations and logout-->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -180,14 +200,33 @@
     </div>
   </nav>
   <div id="content">
-	<div id="tekstBlokMetWelkom">
+  	<div id="textRow">
+  		<div id="textColumn1">
+		  	<h1 style="color:#184893">Welcome to the GIEPA's Weather Application!</h1>
+			<p>This application aims to give you the information you need to find the most ideal fishing spot at any given time.
+			<br />
+			This application will give you weather-information about the windspeed and -direction in & around The Gambia,
+			<br />
+			as well as the local temperature in the South Atlantic Ocean.
+			<br />
+			<br />
+			For more information and help on the application <a href="help.php"><b><u>click here</u></b></a> or click 'Help' on the red navigation bar on the top.</p>
+		</div>
+		<div id="textColumn2">
+			<img src="https://willemwever.kro-ncrv.nl/sites/default/files/styles/article_header/public/field/image/Fishing_boat_in_the_Canary_Islands.jpeg?itok=_MMAFfFn" width="500" height="250" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A;" width="360" height="250" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A; " class="right">
+		</div>
+	</div>
+	<hr />
+  </div>
+
+
+  <!--<div id="textRow">
 	<h1 style="color:#184893">Welcome!</h1>
-	<p><br/>Welcome to the homepage of GIEPA's Weather Application. This website will give you weather-information about the wind<br />in The Gambia and the surrounding seas, as well as the local temperature in the South Atlantic Ocean.<br />With the information that this website provides you will be able to locate the best spot to fish at this current time.<br/><br/></p>
+	<p>Welcome to the homepage of GIEPA's Weather Application. This website will give you weather-information about the wind<br />in The Gambia and the surrounding seas, as well as the local temperature in the South Atlantic Ocean.<br />With the information that this website provides you will be able to locate the best spot to fish at this current time.<br/><br/></p>
 	</div>
   <div class="bigdiv">
 	<img src="https://willemwever.kro-ncrv.nl/sites/default/files/styles/article_header/public/field/image/Fishing_boat_in_the_Canary_Islands.jpeg?itok=_MMAFfFn" width="300" height="208" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A;" width="300" height="208" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A; " class="center">
-</div>
-  </div>
+</div>-->
   <!--container divider-->
   <div class="container">
 	<div style="width:75%; float: right; margin-right: -11%;">

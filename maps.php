@@ -88,8 +88,8 @@
   <!--The navigation bar on the top of the webpage-->
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #DC292A; ">
     <!--GIEPA logo-->
-    <a class="navbar-brand" href="#">
-      <img src="https://www.giepa.gm/sites/default/files/logo-giepa.png" width="180" height="60" alt="" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
+    <a class="navbar-brand" href="home.php">
+      <img src="logo-giepa.png" width="180" height="60" alt="" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
     </a>
     <!--Links to homepage, stations and logout-->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
