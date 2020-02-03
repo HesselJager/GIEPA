@@ -10,7 +10,7 @@
 <html>
 <!--Head of webpage-->
 <head>
-  <link rel="icon" href="giepa.png">
+  <link rel="icon" href="./images/giepa.png">
   <!--Opening code for bootstrap-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -89,7 +89,7 @@
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #DC292A; ">
     <!--GIEPA logo-->
     <a class="navbar-brand" href="home.php">
-      <img src="logo-giepa.png" width="180" height="60" alt="" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
+      <img src="./images/logo-giepa.png" width="180" height="60" alt="Logo GIEPA" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
     </a>
     <!--Links to homepage, stations and logout-->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">

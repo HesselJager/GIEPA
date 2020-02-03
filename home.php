@@ -17,7 +17,7 @@
 <html>
 <!--Head of webpage-->
 <head>
-  <link rel="icon" href="giepa.png">
+  <link rel="icon" href="./images/giepa.png">
   <!--Opening code for bootstrap-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -182,7 +182,7 @@
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #DC292A; ">
     <!--GIEPA logo-->
     <a class="navbar-brand" href="home.php">
-      <img src="logo-giepa.png" width="180" height="60" alt="" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
+      <img src="./images/logo-giepa.png" width="180" height="60" alt="Logo GIEPA" style="background-color:#f5f5f5; padding: 2px; border: 2px solid  #184893; ">
     </a>
     <!--Links to homepage, stations and logout-->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -213,20 +213,11 @@
 			For more information and help on the application <a href="help.php"><b><u>click here</u></b></a> or click 'Help' on the red navigation bar on the top.</p>
 		</div>
 		<div id="textColumn2">
-			<img src="https://willemwever.kro-ncrv.nl/sites/default/files/styles/article_header/public/field/image/Fishing_boat_in_the_Canary_Islands.jpeg?itok=_MMAFfFn" width="500" height="250" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A;" width="360" height="250" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A; " class="right">
+			<img src="https://willemwever.kro-ncrv.nl/sites/default/files/styles/article_header/public/field/image/Fishing_boat_in_the_Canary_Islands.jpeg?itok=_MMAFfFn" width="500" height="250" alt="Fishing boat" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A;" width="360" height="250" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A; " class="right">
 		</div>
 	</div>
 	<hr />
   </div>
-
-
-  <!--<div id="textRow">
-	<h1 style="color:#184893">Welcome!</h1>
-	<p>Welcome to the homepage of GIEPA's Weather Application. This website will give you weather-information about the wind<br />in The Gambia and the surrounding seas, as well as the local temperature in the South Atlantic Ocean.<br />With the information that this website provides you will be able to locate the best spot to fish at this current time.<br/><br/></p>
-	</div>
-  <div class="bigdiv">
-	<img src="https://willemwever.kro-ncrv.nl/sites/default/files/styles/article_header/public/field/image/Fishing_boat_in_the_Canary_Islands.jpeg?itok=_MMAFfFn" width="300" height="208" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A;" width="300" height="208" alt="" style="background-color:#DC292A; padding: 2px; border: 2px solid  #DC292A; " class="center">
-</div>-->
   <!--container divider-->
   <div class="container">
 	<div style="width:75%; float: right; margin-right: -11%;">
