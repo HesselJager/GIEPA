@@ -194,9 +194,9 @@
 	$img_width = 701;
 	$img_height = 701;
 	$dest_image = imagecreatetruecolor($img_width, $img_height);
-	$a = imagecreatefrompng("./images/image.png");
-	$b = imagecreatefrompng("./images/arrow.png");
-	$c = imagecreatefrompng("./images/sides.png");
+	$a = imagecreatefrompng("image.png");
+	$b = imagecreatefrompng("arrow.png");
+	$c = imagecreatefrompng("sides.png");
 	$source = $b;
 	$sw = imagesx($source);
 	$sh = imagesy($source);
@@ -217,7 +217,7 @@
 	imagecopy($dest_image, $c, 0, 0, 0, 0, $img_width, $img_height);
 
 	header('Content-Type: image/png');
-	imagepng($dest_image,"./images/compass.png");
+	imagepng($dest_image,"compass.png");
    }
 
 	

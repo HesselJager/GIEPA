@@ -11,7 +11,7 @@
 			$degrees=$stationdata[sizeof($stationdata)-1]->wnddir;
 		createCompass($degrees); 
 		$output .= "Current wind direction: ".wnddir_to_words($degrees) . "&nbsp; (" . $degrees . "&#176;)";
-		$output .= "<img  id=\"compass\"  style=\"width:100%;\"src=\"./images/compass.png\" alt\"compass\"/>";
+		$output .= "<img  id=\"compass\"  style=\"width:100%;\"src=\"compass.png\" alt\"compass\"/>";
 		} 
 		else{
 		$output .= "<p><h1 style=\"color:red\">No data for this station</h1></p>";
