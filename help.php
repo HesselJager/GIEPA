@@ -192,14 +192,14 @@
       <div id="textColumn">
       <h4>Homepage</h4>
       <p>
-        This page is the first page you visit after logging-in and containts a brief welcome message.It also shows the weather data of the weather station <b>Banjul/Yundum </b>, which is actually the <b>only</b> station located on Gambian soil.
+        This page is the first page you visit after logging-in and containts a brief welcome message.It also shows the weather data of the weather station <b>Banjul/Yundum</b>, which is actually the <b>only</b> station located on Gambian soil.
         <br />
         To go back to the homepage, left-click <b>Home</b> on the navigation bar.
       </p>
       </div>
       <div id="imgColumn" style="">
         <figure>
-          <img src="./images/logo-giepa.png" alt="Logo GIEPA" width="50%" alt="" style="border: 4px solid  #184893; ">
+          <a href="home.php"><img src="./images/logo-giepa.png" alt="Logo GIEPA" width="50%" alt="" style="border: 4px solid  #184893;"></a>
           <figcaption>
             You can always left-click on <b>the GIEPA logo</b> on the navigation bar to go straight to the homepage
           </figcaption>
